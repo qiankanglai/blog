@@ -1,0 +1,102 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Loading & Learning
+subtitle:
+description: Kanglai's personal blog, mainly about coding :D
+author: Kanglai Qian
+language: zh-CN
+timezone: Asia/Shanghai
+
+since: 2012
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://qiankanglai.me
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+# https://github.com/hexojs/hexo/issues/1333#issuecomment-111217533
+skip_render: [boolean/*,boolean/**/*]
+
+# Writing
+new_post_name: :title.md 
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: false
+  tab_replace:
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: material
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+- type: git
+  repo: git@github.com:qiankanglai/qiankanglai.github.io.git
+- type: git
+  repo: git@git.coding.net:qiankanglai/qiankanglai.coding.me.git
+
+# Minifier
+## https://github.com/chenzhutian/hexo-all-minifier
+all_minifier: true
+image_minifier:
+  enable: false
+
+qiniu:
+  offline: false
+  sync: true
+  bucket: qiankanglai
+  secret_file: qn.json
+  dirPrefix:
+  urlPrefix: http://pd3i7mmdp.bkt.clouddn.com
+  local_dir: cdn
+  update_exist: true
+  image:
+    folder: images
+    extend:
+  js:
+    folder: js
+  css:
+    folder: css
+  ignoring_files:
+    - '**/.DS_Store'
