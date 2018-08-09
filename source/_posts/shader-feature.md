@@ -22,6 +22,8 @@ thumbnail: /images/teaser/shader_feature.png
 
 关于这个现象，我的测试结果是Asset Bundle里正常，但是编辑器下模拟Asset Bundle功能的时候因为要使用Windows/OSX版本的Shader，反而出现了`shader_feature`丢失的现象... 目前安全起见我也从`shader_feature`转到了`multi_compile`上，不过根据贴图情况去控制Keyword的思路没变
 
+**更新2**: 这个问题在新版本Unity已解决，见{% post_link shadervariantcollection %}
+
 # 解决思路
 
 在官方文档里找到了答案：[Making multiple shader program variants](https://docs.unity3d.com/Manual/SL-MultipleProgramVariants.html)。之前我主要使用的是`multi_compile`在运行时切换，现在发现`shader_feature`对应自定义的`CustomEditor`能很好的完成这个需求。下表为同一个材质球配合不同贴图的参数，以及对应GLES版本的Compiled Code的指令数:
