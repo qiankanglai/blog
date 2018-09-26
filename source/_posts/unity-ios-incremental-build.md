@@ -22,7 +22,7 @@ tags: [Unity, iOS]
 
 接下来麻烦的一个地方是，出包服务器上调用的是`xcode archive`然后`xcodebuild -exportArchive`来生成.ipa，但这个默认就是clean build。如果直接`xcodebuild`的话得到的是.app无法签名。
 
-网上搜了下[How to create XCode archive without a clean build](https://stackoverflow.com/questions/14640816/how-to-create-xcode-archive-without-a-clean-build)，有人提的路子是`PackageApplication`但这货已经被官方移除了(不推荐使用)。我从网上下了个PackaegApplication放到XCode目录，确实是能用的，但是证书部分怎么都搞不对。
+网上搜了下[How to create XCode archive without a clean build](https://stackoverflow.com/questions/14640816/how-to-create-xcode-archive-without-a-clean-build)，有人提的路子是`PackageApplication`但这货已经被官方移除了(不推荐使用)。我从网上下了个PackageApplication放到XCode目录，确实是能用的，但是证书部分怎么都搞不对。
 
 后来我分析了下xarchive文件，发现里面其实就是.app和Info.plist而已(其实还有dSYM，但删掉完全没影响)。这样的话解决方案就很简单了...
 
