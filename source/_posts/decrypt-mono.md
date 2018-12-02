@@ -1,5 +1,5 @@
 ---
-title: decrypt-mono
+title: 反解常见Mono加密的一种通用探索
 date: 2018-09-26 18:57:50
 tags:
 ---
