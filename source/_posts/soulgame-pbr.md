@@ -10,4 +10,4 @@ toc: false
 
 <!--more-->
 
-[slides](/downloads/SoulGame_PBR_v2.1.pptx)(之后UWA会统一整理视频版
+[slides](https://github.com/qiankanglai/blog/raw/master/raw/SoulGame_PBR_v2.1.pptx)(之后UWA会统一整理视频版)

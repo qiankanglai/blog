@@ -12,4 +12,4 @@ toc: false
 
 依旧是感谢雨松和文档，这次的分享主题是Missing & None的问题；很早之前也分享过这个问题{% post_link fake-null.so %}
 
-[slides下载](/downloads/unity_missingandnone.pptx)
+[slides下载](https://github.com/qiankanglai/blog/raw/master/raw/unity_missingandnone.pptx)

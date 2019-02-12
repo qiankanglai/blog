@@ -11,4 +11,4 @@ toc: false
 
 <!--more-->
 
-放一下当时的[slides](/downloads/unity_workflow.pptx)，里面主要是我最近一年关于工作流的一些思考。
+放一下当时的[slides](https://github.com/qiankanglai/blog/raw/master/raw/unity_workflow.pptx)，里面主要是我最近一年关于工作流的一些思考。

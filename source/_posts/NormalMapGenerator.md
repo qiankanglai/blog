@@ -23,4 +23,4 @@ toc: false
 
 与之前图像处理的知识结合，很有意思~
 
-[C++代码](/downloads/NormalMap.zip)
+[C++代码](https://github.com/qiankanglai/blog/raw/master/raw/NormalMap.zip)
