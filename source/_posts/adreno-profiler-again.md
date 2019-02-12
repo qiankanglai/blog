@@ -146,7 +146,7 @@ namespace QXProfilerControls
 
 再次更新一下一个BUG FIX，我发现某些游戏的顶点数据是不全的，导出的时候会崩溃...
 
-{% qnimg adreno_zmq_crash.jpg %}
+{% asset_img adreno_zmq_crash.jpg %}
 
 {% codeblock lang:csharp %}
 #region " Imports "

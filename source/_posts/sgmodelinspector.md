@@ -9,9 +9,9 @@ thumbnail: /images/teaser/modelinspector.png
 
 <!--more-->
 
-{% qnimg uemesheditor.jpg %}
+{% asset_img uemesheditor.jpg %}
 
-{% qnimg sgmodelinspector.png %}
+{% asset_img sgmodelinspector.png %}
 
 # DecoratorEditor
 

@@ -45,6 +45,6 @@ thumbnail: /images/teaser/projector_shadow.png
 
 当然，还有进一步优化的方法。我在另一个项目里直接使用了低模作为Geometry Proxy，降低Cast Shadow的消耗；另外有个插件[Fast Shadow Receiver](https://www.assetstore.unity3d.com/en/#!/content/20094)可以显著降低Receive Shadow消耗：
 
-{% qnimg fastshadowreceiver.png %}
+{% asset_img fastshadowreceiver.png %}
 
 原理也非常简单粗暴：直接生成一个Mesh来接受影子，对肯定接受不到的部分就不参与绘制。这个插件牛的地方在于它同时实现了Plane级别的接受和Mesh级别的，因为它直接实现了一个树形结构来保存Mesh信息，按需生成(目瞪口呆脸...)。譬如原来是一个复杂的场景接收影子的话就需要重绘整个模型，现在只需要绘制一小部分的网格就可以了～

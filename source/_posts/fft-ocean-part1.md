@@ -11,7 +11,7 @@ toc: false
 
 <!--more-->
 
-{% qnimg fft_part1.gif %}
+{% asset_img fft_part1.gif %}
 
 主要参考了Jerry Tessendorf的[Simulating Ocean Water](http://graphics.ucsd.edu/courses/rendering/2005/jdewall/tessendorf.pdf)这篇论文，实现上还参考了[NVidia的Ocean Surface Simulation](https://developer.nvidia.com/sites/default/files/akamai/gamedev/files/sdk/11/OceanCS_Slides.pdf), [OCEAN SIMULATION](http://www.keithlantz.net/2011/10/ocean-simulation-part-one-using-the-discrete-fourier-transform/)等资料。
 

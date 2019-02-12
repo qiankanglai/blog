@@ -15,7 +15,7 @@ After struggling a whole weekend, I finally compiled libcurl 7.37.0 with android
 
 Follow instructions in [Download and Building](https://source.android.com/source/building.html) and build android first. If you encounter connecting problems in China, you may refer to {% post_link android-GFW %}. My android source folder is put at `/home/anthony/android`.
 
-{% qnimg android.jpg %}
+{% asset_img android.jpg %}
 
 # Generate LIBS
 
@@ -67,7 +67,7 @@ LIBS="$ANDROID_ROOT/out/target/product/generic/obj/lib/crtbegin_dynamic.o $ANDRO
 
 Run the script to configure by `./build.sh` and `make libcurl` from android source root. You will find what you want in `out/target/product/generic/obj`:
 
-{% qnimg libcurl_android.jpg %}
+{% asset_img libcurl_android.jpg %}
 
 # Downgrade to lower Android version
 

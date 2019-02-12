@@ -14,7 +14,7 @@ ps. 粒子系统里貌似有两套速度，一个是Script里的对应startSpeed
 
 然后试图山寨了下水波的效果，用一个脑洞大开的思路做了下，自我感觉还行\_(:з」∠)\_
 
-{% qnimg fakewater.gif %}
+{% asset_img fakewater.gif %}
 
 这个效果说穿了就是做一个圆环波纹的bump，然后通过Script控制其center/scale贴到平面上(我设置最多贴六个环)；在Shader里用max取到最大的Normal来计算光照...
 

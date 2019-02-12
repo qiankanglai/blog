@@ -10,7 +10,7 @@ toc: false
 
 <!--more-->
 
-{% qnimg NormalMapGenerate.png %}
+{% asset_img NormalMapGenerate.png %}
 
 核心思路非常简单粗暴：
 

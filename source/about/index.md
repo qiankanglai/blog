@@ -12,7 +12,7 @@ thumbnail: /images/teaser/NGNL.jpg
 
 I'm a big fan of rendering and started playing around this when I was an undergraduate. Gained some experience about image processing, GPU acceleration in school, I'm working as a game developer in a small company. [Unity](http://unity3d.com/) is the main tool for me so most of my recent blogs are related to it, but I also spend a lot of part time playing with [UE4](https://www.unrealengine.com/) and [KlayGE](http://www.klayge.org/).
 
-{% qnimg qiankanglai.png %}
+{% asset_img qiankanglai.png %}
 
 ## Education
 

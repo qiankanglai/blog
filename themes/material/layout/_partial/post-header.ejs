@@ -11,7 +11,7 @@
         <% } %>
     <% }else{ %>
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%- qnurl(page.thumbnail) %>)">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(<%- url_for(page.thumbnail) %>)">
     <% } %>
             <p class="article-headline-p">
                 <%- page.title %>
@@ -26,7 +26,7 @@
         <!-- Post Header Info -->
         <div class="post-header_info without-thumbnail">
             <!-- Author Avatar & Name -->
-            <img src="<%- qnurl(theme.img.avatar) %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
+            <img src="<%- url_for(theme.img.avatar) %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
             <span class="name-span"><%= config.author %></span>
         </div>
 
@@ -36,13 +36,13 @@
         <!-- Post Header Info -->
         <div class="post-header_info with-thumbnail">
             <!-- Author Avatar & Name -->
-            <img src="<%- qnurl(theme.img.avatar) %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
+            <img src="<%- url_for(theme.img.avatar) %>" class="avatar-img" width="44px" height="44px" alt="<%= config.author %>'s avatar">
             <span class="name-span"><%= config.author %></span>
         </div>
 
         <!-- Custom thumbnail -->
         <div class="post_thumbnail-custom">
-            <img src="<%- qnurl(page.thumbnail) %>">
+            <img src="<%- url_for(page.thumbnail) %>">
     <% } %>
         </div>
 <% } %>

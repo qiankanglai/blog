@@ -167,7 +167,7 @@ public virtual Material GetModifiedMaterial(Material baseMaterial)
 
 在梳理完策略之后，我实现了一个小工具去模拟BuildBatch，在简单UI的情况下模拟结果和FrameDebugger结果一致。然后顺便发现了这种贪心策略的盲点：
 
-{% qnimg ugui_batch_example1.png %}
+{% asset_img ugui_batch_example1.png %}
 
 在这种情况下Image (1)一定要在Text (1)后绘制，所以Depth分别是1和0。我估计在第6步排序(在Depth相同时会通过Material ID来决定顺序)得到的结果是Image < Text (1) < Image (1)，最终就导致两个Image没法进行Batch。最理想情况其实是先绘制Text然后再绘制两个Image。
 

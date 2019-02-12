@@ -41,17 +41,17 @@ Unity不支持热更新这事情一直是一个谜一样的痛点，特别是在
 以下为UWA在Android上对高、中、低配置的三款设备进行测试后得到的平均数据，图中下方的表格部分为柱状图的准确数值，而其数值表示的是完成测试用例所需的时间，单位为毫秒。
 
 - 低端设备：三星 S3 (Android OS 4.3)
-{% qnimg lua_benchmark/android_1.png %}
+{% asset_img lua_benchmark/android_1.png %}
 - 中端设备：红米 Note2 (Android OS 5.0.2)
-{% qnimg lua_benchmark/android_2.png %}
+{% asset_img lua_benchmark/android_2.png %}
 - 高端设备：三星S6 (Android OS 6.0.1)
-{% qnimg lua_benchmark/android_3.png %}
+{% asset_img lua_benchmark/android_3.png %}
 
 ## iOS
 
 以下为UWA在iOS上对armv7和arm64的两款设备进行测试后得到的平均数据，测试中使用了il2cpp＋Universal的发布方式，同时禁用了bitcode。图中下方的表格部分为柱状图的准确数值，而其数值表示的是完成测试用例所需的时间，单位为毫秒。
 
 - armv7设备：iPhone 4s (OS 7.1.2)
-{% qnimg lua_benchmark/ios_1.png %}
+{% asset_img lua_benchmark/ios_1.png %}
 - arm64设备：iPhone 5s (OS 9.3.5)
-{% qnimg lua_benchmark/ios_2.png %}
+{% asset_img lua_benchmark/ios_2.png %}

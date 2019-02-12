@@ -10,7 +10,7 @@ toc: false
 
 <!--more-->
 
-{% qnimg fillrate_profiler.png %}
+{% asset_img fillrate_profiler.png %}
 
 看到这个现象的第一反应当然是查vertices/trianges以及batch：
 

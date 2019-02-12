@@ -30,15 +30,15 @@ thumbnail: /images/teaser/tanker_op_by_slim_charles-dany4nk.jpg
 
 在空场景里使用导入QC:
 
-{% qnimg blender_source_import.png %}
+{% asset_img blender_source_import.png %}
 
 这是使用QC是因为可以一次性把相关的模型部分都导入，如果使用SMD就需要一个个分别导入人肉组合。
 
-{% qnimg blender_source_import_qc.png %}
+{% asset_img blender_source_import_qc.png %}
 
 然后导出FBX之前，建议删掉Camera/Cube/Lamp/VTA vertices/**UnknownModelName/phymodel**等信息
 
-{% qnimg blender_source_useless_parts.png %}
+{% asset_img blender_source_useless_parts.png %}
 
 # 贴图处理
 

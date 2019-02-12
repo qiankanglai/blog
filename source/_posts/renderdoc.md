@@ -23,7 +23,7 @@ ps. 这个工具是从DX层去抓取真实绘制信息，和引擎内置的工�
 
 官方文档[RenderDoc plugin](https://wiki.unrealengine.com/RenderDoc_plugin)有点过时，其实最近几个版本的引擎已经内置了这个插件。下图是我在4.18.3里打开这个插件:
 
-{% qnimg renderdoc_ue4.png %}
+{% asset_img renderdoc_ue4.png %}
 
 然后同样是点同一个小图标截取。如果需要调试Shader的话在`Engine\Config\ConsoleVariables.ini`打开这两行
 
@@ -36,7 +36,7 @@ r.Shaders.KeepDebugInfo=1
 
 常见的功能譬如查看Draw Call略过不提，我个人最喜欢的是查看Shader及参数。甚至可以直接修改Shader看结果，不过我发现有时候CB会在修改过程中乱掉，至今没有找到好的办法fix。
 
-{% qnimg renderdoc_shader.png %}
+{% asset_img renderdoc_shader.png %}
 
 更多推荐参考文档[How do I debug a shader?](https://renderdoc.org/docs/how/how_debug_shader.html)。
 

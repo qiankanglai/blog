@@ -13,15 +13,15 @@ toc: false
 
 第一个常见的问题是渐变颜色区域经过压缩之后会出现色阶，如下图所示。我参考了dither思路，用Photoshop加了一层0.3%的高斯分布杂音；可以看到ETC和PVR都有所改进，但是仔细盯着看依然能看到一些噪声。
 
-{% qnimg compress_texture_1.png %}
+{% asset_img compress_texture_1.png %}
 
 另一个很常见的问题就是有杂色(下图绿色部分)，本质是在某些block里边界混合了...解决方法就是非常粗暴的放大分辨率，可以看到当放大到2x大小的时候就完全没问题了。这个事情桌子很早也和我提过，压缩纹理的UI部分最好放大一些，当超采样来用...
 
-{% qnimg compress_texture_2.png %}
+{% asset_img compress_texture_2.png %}
 
 顺便再提一句就是，新版本的Texture Packer里有了polygon布局，还能扣洞真是excited...
 
-{% qnimg texture_packer_polygon.png %}
+{% asset_img texture_packer_polygon.png %}
 
 ~~ps. 最早我们使用的是将原始图片拆分成RGB和Alpha Mask两张图的策略，然后替换默认的UI Shader。但是[Unity-5.2](http://unity3d.com/cn/unity/whats-new/unity-5.2)开始默认将ETC2设为默认(顺便支持了ETC1 Compression for Sprite Atlases)，所以我就懒得切图+每个Sprite拖材质球了...直接一张RGBA进行压缩完事儿~~
 

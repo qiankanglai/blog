@@ -122,7 +122,7 @@ Z:\\Users\\anthony\\Desktop\\Shader@0x406A5570(5,5): error X3000: syntax error: 
 
 接入的时候，遇到了一个非常奇怪的问题：调试的时候很容易出现程序异常退出(exit code -1)
 
-{% qnimg wine_xcode_lostconnection.jpg %}
+{% asset_img wine_xcode_lostconnection.jpg %}
 
 经过反复尝试，还有以下特点
 

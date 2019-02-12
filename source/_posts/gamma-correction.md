@@ -13,7 +13,7 @@ tags: [Unreal,Unity]
 
 具体Gamma Correction(伽马校正/Gamma校正)相关内容可以参看klayge上的[gamma的传说](http://www.klayge.org/2011/02/26/gamma%E7%9A%84%E4%BC%A0%E8%AF%B4/)一文。如果把颜色亮度理解为能量的话，输入和输出中是非线性的对应关系，对应下图中的红线；但是计算的时候必须使用线性对应才对，对应绿线：
 
-{% qnimg gamma_lines.png %}
+{% asset_img gamma_lines.png %}
 
 具体的转换公式就是2.2了~如此就能理解为什么50%灰度是186: `pow(0.5, 1.0/2.2)*255`，这样才保证转换到线性空间后是0.5。
 
@@ -23,17 +23,17 @@ tags: [Unreal,Unity]
 
 | 127/255(sRGB) | 127/255(RGB) | 127/255(RGB) |
 |----------------------------------------------------------|----------------------------------------------------------|----------------------------------------------------------|
-| {% qnimg gamma_127_sRGB.png %} | {% qnimg gamma_186_sRGB.png %} | {% qnimg gamma_127_sRGB.png %} |
+| {% asset_img gamma_127_sRGB.png %} | {% asset_img gamma_186_sRGB.png %} | {% asset_img gamma_127_sRGB.png %} |
 
 可以看到颜色明显不同；但是修改颜色空间之后，就基本一致了。Windows下默认的颜色空间是sRGB，也就是需要经过Gamma校正的。
 
-{% qnimg gamma_unreal.png %}
+{% asset_img gamma_unreal.png %}
 
 所以说最开始的说法，在默认情况下是成立的；但是Unreal也支持导入线性空间贴图，所以也能用127/255来表示50%灰。
 
 插一句题外话就是Unreal其实在选颜色的地方也可以设置颜色空间，譬如下图中R通道的0.259其实对应的Gamma空间里的138/255。
 
-{% qnimg gamma_unreal2.png %}
+{% asset_img gamma_unreal2.png %}
 
 # Unity
 
@@ -42,13 +42,13 @@ Unity文档里有一页叫[Linear Lighting](http://docs.unity3d.com/Manual/Linea
 - Existing (Gamma) Pipeline: 默认设置，完全不考虑颜色空间的转换，输入什么颜色就使用什么颜色，输出的时候也不考虑转换；这个方式相当于错上加错，虽然抵销掉一部分但依然是错的。
 - Linear Lighting Pipeline: 输入的时候进行sRGB到RGB转换(利用硬件接口)，输出的时候再转回sRGB；这个才是正确地做法，但目前只支持Windows & Mac/XBox 360/PlayStation 3，令人忧郁
 
-{% qnimg gamma_unity_colorspace.png %}
+{% asset_img gamma_unity_colorspace.png %}
 
 简单做一个实验：读取127/255贴图亮度、乘以二后输出
 
 | Gamma: 255 | Linear: 174 |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| {% qnimg gamma_unity_gammaspace.png %} | {% qnimg gamma_unity_linearspace.png %} |
+| {% asset_img gamma_unity_gammaspace.png %} | {% asset_img gamma_unity_linearspace.png %} |
 
 右边这张图的亮度相当于`pow(pow(0.5,2.2)*2, 1/2.2)*255`~
 

@@ -10,17 +10,17 @@ toc: false
 
 <!--more-->
 
-{% qnimg ggx1.gif %}
+{% asset_img ggx1.gif %}
 
 对照着翻译做下来的感觉基本就是Blinn Phong+Toon Shading，然后配合贴图控制参数。日本人关于“阴·影”的区别也挺有意思的。
 
 做的过程中尝试比对了下校正法线前后区别，我眼神不好看不太出... 左边是用引擎计算的，右边是导入max的
 
-{% qnimg ggx_normal.png %}
+{% asset_img ggx_normal.png %}
 
 再试了下换SSS贴图，使得阴部分产生变化
 
-{% qnimg ggx_sss.png %}
+{% asset_img ggx_sss.png %}
 
 比较遗憾的是没有搞出顶点色，所以无法进一步尝试控制描边效果；本村线也没有搞定，如果有哪位弄出来了希望指点一下。Rip出来的模型有2个uv channel，不过两个相差不大所以无从下手了；有vertex color不过是空的 TAT
 

@@ -9,7 +9,7 @@ tags: Unity
 
 <!--more-->
 
-{% qnimg unity_localize_app.png %}
+{% asset_img unity_localize_app.png %}
 
 ## Android 
 
@@ -23,7 +23,7 @@ tags: Unity
 
 需要注意的一点是，默认的名字会以Player Setting里的Product Name为准
 
-{% qnimg unity_localize_default.png %}
+{% asset_img unity_localize_default.png %}
 
 对于其他语言，譬如简体中文，就在如下目录建立对应的strings.xml，内容为
 

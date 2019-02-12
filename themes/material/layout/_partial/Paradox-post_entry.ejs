@@ -10,7 +10,7 @@
         <% } %>
     <% } else { %>
         <!-- Custom Thumbnail -->
-        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="<%- qnurl(post.thumbnail) %>">
+        <div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50 lazy" data-original="<%- url_for(post.thumbnail) %>">
     <% } %>
 
         <!-- Post Title -->
@@ -34,7 +34,7 @@
         <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
             <!-- Author Avatar -->
             <div id="author-avatar">
-                <img src="<%- qnurl(theme.img.avatar) %>" width="44px" height="44px" alt="<%= config.author %>'s avatar">
+                <img src="<%- url_for(theme.img.avatar) %>" width="44px" height="44px" alt="<%= config.author %>'s avatar">
             </div>
             <div>
                 <strong><%= config.author %></strong>

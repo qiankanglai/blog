@@ -44,7 +44,7 @@ public class FinishCompiling
 }
 {% endcodeblock %}
 
-{% qnimg unitycompile_timeanalyze.png %}
+{% asset_img unitycompile_timeanalyze.png %}
 
 测试的时候随便右键一个脚本-Reimport即可，这里我们要记下第一条数据：**原始版本slua 编译时间大概在20s左右**。
 
@@ -75,7 +75,7 @@ public class FinishCompiling
 
 这里必须使用文件来传递参数而不是直接在控制台传递过去的原因是Windows有一个奇葩限制 [Command prompt (Cmd. exe) command-line string limitation](https://support.microsoft.com/en-us/kb/830473)
 
-{% qnimg unitycompile_compile2dll.png %}
+{% asset_img unitycompile_compile2dll.png %}
 
 编译的时候我是根据文件夹去分Player/Editor两个版本的dll，搭配不同的宏和DLL引用。这里比较麻烦的是DLL部分，一方面要引入引擎相关的，此外还要引入项目里的`Library/ScriptAssemblies/Assembly-CSharp.dll`及其他非native的Plugin。编译完成之后删掉原来的cs文件导入新的dll就行了。
 
@@ -144,11 +144,11 @@ pss. 这里只是测试偷懒换了编译器，但是我个人不建议在实际
 
 使用了手头在优化的一个项目：原版编译时间大概23s左右
 
-{% qnimg unitycompile_test1.png %}
+{% asset_img unitycompile_test1.png %}
 
 新版本编译时间大概7s左右
 
-{% qnimg unitycompile_test2.png %}
+{% asset_img unitycompile_test2.png %}
 
 没错...说穿了就是**把包括插件在内的基本不会修改的代码挪到Standard Assets里就完事儿了**，经常修改的代码放在外面原地不动。这样唯一的一个限制是Standard Assets里的代码无法引用外面的代码，不过我这里全是放的插件，完全没有问题。
 

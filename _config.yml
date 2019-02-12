@@ -81,22 +81,3 @@ deploy:
 all_minifier: true
 image_minifier:
   enable: false
-
-qiniu:
-  offline: false
-  sync: true
-  bucket: qiankanglai
-  secret_file: qn.json
-  dirPrefix:
-  urlPrefix: http://pd3i7mmdp.bkt.clouddn.com
-  local_dir: cdn
-  update_exist: true
-  image:
-    folder: images
-    extend:
-  js:
-    folder: js
-  css:
-    folder: css
-  ignoring_files:
-    - '**/.DS_Store'

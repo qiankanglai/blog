@@ -9,7 +9,7 @@ tags: [Unreal,Unity]
 
 <!--more-->
 
-{% qnimg lightprobe_compare.jpg %}
+{% asset_img lightprobe_compare.jpg %}
 
 ps. 最近真是发现要用点啥都找不到靠谱的资料，莫非最近使用google搜索的能力变差了，真是心塞-.- 不过搞懂之后发现这俩工具还是很灵的~
 
@@ -48,25 +48,25 @@ struct FConstructorStatics
 
 这个工具目前是收费的(而且还挺贵-v-)，不过网上有V1版本的免费版、虽然官网上的已经没对应下载链接了。这个工具主要是将各种形式的图片相互转换。打开Image-Panorama-Panoramic Transformations，输入图片设为Latitude/Longitude, 输出图片设为Cubic Environment。将Wrap过的图片保存即可。
 
-{% qnimg lightprobe_hdrshop.png %}
+{% asset_img lightprobe_hdrshop.png %}
 
 需要注意的是修改Width/Height, 保证生成的每个小贴图的长宽相同、都是4的倍数，不然在最后倒入的时候可能遇到麻烦。下图为生成的结果，每个小的正方形是256x256，所以变换的时候是3\*256x4\*256即768x1024。
 
 此外，经过桌子提醒这个贴图的顶部出现了菊花，我查了下UE4里自己就有嘿嘿~其实最简单的办法是抹掉原图最上面一条，这样变换之后顶部中心没内容就好。
 
-{% qnimg lightprobe_ue4.png %}
+{% asset_img lightprobe_ue4.png %}
 
-{% qnimg lightprobe_hdrshop_cubecross.png %}
+{% asset_img lightprobe_hdrshop_cubecross.png %}
 
 顺便解释一下这几种可以相互转换的格式，部分参考[这个教程](http://www.cicw.org/bbs/read.php?tid=333&page=2)：
 
 - Latitude/Longitude: 就是从UE4扒拉出来的输入图，横纵坐标对应的经纬度，再举个栗子就是[世界地图](http://en.wikipedia.org/wiki/Geographic_coordinate_system)；
-{% qnimg lightprobe_Earthmap720x360_grid.jpg %}
+{% asset_img lightprobe_Earthmap720x360_grid.jpg %}
 - Cubic Environment: 使用六张图组成的环境贴图，参考刚才的输出图，不过和我们平常用的一横条六个图不一样，这里是组成了一个Vertical Cross(竖十字架)；
 - Mirrored Ball: 反光球
-{% qnimg lightprobe_hdrshop_mirrorball.png %}
+{% asset_img lightprobe_hdrshop_mirrorball.png %}
 - Light Probe: 光探针
-{% qnimg lightprobe_hdrshop_lightprobe.png %}
+{% asset_img lightprobe_hdrshop_lightprobe.png %}
 
 可以看到后两种的映射方式其实是不一样的，细节等有心情再补
 
@@ -74,7 +74,7 @@ struct FConstructorStatics
 
 将上一步生成的Cubic Environment(cross)，导入到CubeManGen里，再导出就能得到我们需要的格式: 在右边点Load Cube Cross导入，然后点Save CubeMap(.dds)~注意检查下纹理大小和格式
 
-{% qnimg lightprobe_cubemangen1.png %}
+{% asset_img lightprobe_cubemangen1.png %}
 
 此外！CubeManGen还有两个很实用的功能：
 
@@ -82,7 +82,7 @@ struct FConstructorStatics
 - Edge Fixup: 因为cubemap是六个图贴起来的，所以如果直接各自模糊会导致边缘出现问题，这里勾上可以修一下
 
 对比图(MipMap开的比较高)：
-{% qnimg lightprobe_cubemangen2.png %}
+{% asset_img lightprobe_cubemangen2.png %}
 
 # Unity
 
@@ -90,4 +90,4 @@ struct FConstructorStatics
 
 导入之前记得确认dds格式以及大小，不然可能导入的时候导致Unity崩溃(细节差距啊)~导入之后确认下有MipMap勾上了
 
-{% qnimg lightprobe_unity3d.png %}
+{% asset_img lightprobe_unity3d.png %}

@@ -25,27 +25,27 @@ Real-Time Anti-Aliasing](http://iryoku.com/aacourse/)(很多sig course好棒好�
 
 Temporal AA: 
 
-{% qnimg unity_temporal_aa_on.png %}
+{% asset_img unity_temporal_aa_on.png %}
 
 W/O AA: 
 
-{% qnimg unity_temporal_aa_off.png %}
+{% asset_img unity_temporal_aa_off.png %}
 
 Nexus5真机
 
 | Temporal AA | W/O AA |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| {% qnimg unity_android_temporal_aa_on.png %} | {% qnimg unity_android_temporal_aa_off.png %} |
+| {% asset_img unity_android_temporal_aa_on.png %} | {% asset_img unity_android_temporal_aa_off.png %} |
 
 放大出来还是能看出来的
 
-{% qnimg unity_android_temporal_aa_compare.png %}
+{% asset_img unity_android_temporal_aa_compare.png %}
 
 # 性能
 
 在Nexus 5上跑了下Shadow Gun Sample Level这个场景，每帧消耗时间大概增加了7ms；从profiler上来看主要是因为用到了Depth Texture，而且看起来不是直接用的ZBuffer导致的(见{% post_link unity-misc %})，话说还是Defer大法好-_,-
 
-{% qnimg unity_profiler_temporal_aa.jpg %}
+{% asset_img unity_profiler_temporal_aa.jpg %}
 
 NVidia在[Far Cry 4 Graphics, Performance & Tweaking Guide](http://www.geforce.com/whats-new/guides/far-cry-4-graphics-performance-and-tweaking-guide#far-cry-4-nvidia-txaa-anti-aliasing)中有不同AA效果对比；TweakGuides的[Crysis 3 Tweak Guide](http://www.tweakguides.com/Crysis3_6.html)中有一节专门讲Antialiasing，里面有性能图标。后来问了下老大，她意思就是AA还是比较费的，等有性能余地的话才加；而且比较尴尬的是手机屏幕上其实看不太出区别，看来还是要配合动态分辨率+upscale~
 

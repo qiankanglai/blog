@@ -13,13 +13,13 @@ tags: [Android,Java]
 
 这个主要是解决不同手机分辨率不一样的情况，其实安卓本身也有9-patch这样的东西。下图是主界面，整体是一个RelativeLayout，上面置顶了一个RelativeLayout作为Head，下面置地了一个RelativeLayout作为Bottom，中间用一个match_parent的自定义ImageView画房型。在Head和Bottom上也分别用相对定位，在拿几个同学手机测试的时候都表现良好。
 
-{% qnimg HomeLight_Main.png %}
+{% asset_img HomeLight_Main.png %}
 
 # 透明启动画面
 
 主要参考了这个教程[An Advanced Splash Screen for Android App](http://www.codeproject.com/Articles/113831/An-Advanced-Splash-Screen-for-Android-App)
 
-{% qnimg HomeLight_Splash.png %}
+{% asset_img HomeLight_Splash.png %}
 
 简单说一下，就是在屏幕中间放置一个ImageView，通过设置theme里的透明背景色和Overlay来实现
 
@@ -64,7 +64,7 @@ tags: [Android,Java]
 
 # Drawable ImageView
 
-{% qnimg HomeLight_Main2.png %}
+{% asset_img HomeLight_Main2.png %}
 
 户型图上面的灯光是我直接画上去的，本质是重载了ImageView的OnDraw方法，刷新时调用invalidate()方法。
 
@@ -80,7 +80,7 @@ public void onDraw(Canvas canvas) {
 
 # ColorPicker Dialog
 
-{% qnimg HomeLight_ColorPicker.png %}
+{% asset_img HomeLight_ColorPicker.png %}
 
 要想做一个选出所有颜色的colorpicker还是比较麻烦的，当时用过别人的Library。不过这次只要用有限的灯光，因此就直接自定义了一个Dialog的子类，里面放了个ImageView放图片。当触摸事件产生时，获取图片对应的RGB即可
 

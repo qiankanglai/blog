@@ -10,7 +10,7 @@ updated: 2016/10/31
 
 <!--more-->
 
-{% qnimg LoopScrollRect/demo1.gif %}
+{% asset_img LoopScrollRect/demo1.gif %}
 
 **ChangeLog**
 
@@ -23,11 +23,11 @@ updated: 2016/10/31
 
 此外支持了ScrollBar，支持横向、纵向及正反向。
 
-{% qnimg LoopScrollRect/demo2.gif %}
+{% asset_img LoopScrollRect/demo2.gif %}
 
 在关闭Mask后可以看到，只有当需要的时候才动态实例化元素，使用完后回收。
 
-{% qnimg LoopScrollRect/demo3.gif %}
+{% asset_img LoopScrollRect/demo3.gif %}
 
 # 介绍
 
@@ -183,7 +183,7 @@ private RectTransform InstantiateNextItem(int itemIdx)
     - 每个物体上需要贴上`Layout Element`并指定preferred width/height
     - 贴上一个脚本接受`void ScrollCellIndex (int idx) `消息，从而对每个位置的元素根据需要灵活修改
 
-{% qnimg LoopScrollRect/ScrollCell.png %}
+{% asset_img LoopScrollRect/ScrollCell.png %}
 
 - 在Hierarchy里右键，选择**UI/Loop Horizontal Scroll Rect**或**UI/Loop Vertical Scroll Rect**即可。使用Component菜单里的也是一样的。
     - Init in Start: 启动时自动调用Refill cells初始化
@@ -195,7 +195,7 @@ private RectTransform InstantiateNextItem(int itemIdx)
     - Clear Cells: 清除已有元素，恢复到未初始化状态
     - Refill Cells: 初始化并填充元素
 
-{% qnimg LoopScrollRect/LoopVerticalScrollRect.png %}
+{% asset_img LoopScrollRect/LoopVerticalScrollRect.png %}
 
 如果是正向滑动，就设置pivot为1；否则设为0并打开ReverseDirection。我强烈建议你试试在播放状态下试试看修改这些参数。
 

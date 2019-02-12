@@ -11,7 +11,7 @@ toc: false
 
 <!--more-->
 
-{% qnimg furshader1.png %}
+{% asset_img furshader1.png %}
 
 这个代码一开始貌似是Unity 3.x版本的，我稍微改了几个地方，不然在Android上是黑的：
 
@@ -31,7 +31,7 @@ toc: false
 
 这里把相邻Pass挪动顶点的距离放大，就很清晰的看到一层层结构：
 
-{% qnimg furshader2.png %}
+{% asset_img furshader2.png %}
 
 顺便提一句就是，我也见到有人是从噪声纹理贴图中取alpha，配合前面的“移动的越往外的顶点alpha越小”规则，调出一个Fur。
 

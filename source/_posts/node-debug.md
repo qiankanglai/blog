@@ -71,7 +71,7 @@ clock_gettime(CLOCK_REALTIME, {1410747202, 464742281}) = 0
 
 首先通过`sudo kill -s USR1 pid`指令向这个node server发送信号，然后用`node debug 127.0.0.1:5858`就可以连上了！使用方法基本和gdb是一样的：
 
-{% qnimg node_debug.png %}
+{% asset_img node_debug.png %}
 
 常见指令列表：
 

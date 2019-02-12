@@ -30,7 +30,7 @@ thumbnail: /images/teaser/shader_feature.png
 
 | | 完整版本 | 精简版本 |
 | ----- | ----- | ----- |
-| | {% qnimg SGPBR.png %} | {% qnimg SGPBR2.png %} |
+| | {% asset_img SGPBR.png %} | {% asset_img SGPBR2.png %} |
 | vert | 43 | 43 |
 | frag | 81 | 50 |
 

@@ -12,14 +12,14 @@ toc: false
 
 adreno profiler表明`UNITY_SAMPLE_TEXCUBE_LOD`在GLES3下会使用`textureLod`，在GLES2下回落到`textureCUBE`，没毛病~
 
-{% qnimg GLES3_PBR.png %}
+{% asset_img GLES3_PBR.png %}
 
-{% qnimg GLES2_PBR.png %}
+{% asset_img GLES2_PBR.png %}
 
 比较麻烦的是`tex2Dlod`在GLES2下会自动使用`GL_ARB_shader_texture_lod`，所以不知道如果在不支持的机器上是什么表现。
 
 我试图用`SHADER_TARGET`来区分结果发现编译出来的还是一样的...看来还是要尽量避免
 
-{% qnimg GLES3_FXAA.png %}
+{% asset_img GLES3_FXAA.png %}
 
-{% qnimg GLES2_FXAA.png %}
+{% asset_img GLES2_FXAA.png %}

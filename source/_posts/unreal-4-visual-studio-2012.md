@@ -30,7 +30,7 @@ public static readonly WindowsCompiler Compiler = WindowsCompiler.VisualStudio20
 
 先大概看看有多少第三方库需要倒腾一下
 
-{% qnimg unreal4_1.png %}
+{% asset_img unreal4_1.png %}
 
 简单介绍下不同的库的处理方式。基本的策略就是能自己编译就自己编译，基本上Visual Studio 2012都有对应的工程不用设置；不然就试试cygwin；实在不行就直接复制粘贴好了~
 
@@ -38,7 +38,7 @@ public static readonly WindowsCompiler Compiler = WindowsCompiler.VisualStudio20
 
 以DirectShow为例，打开`Engine\Source\ThirdParty\DirectShow\DirectShow-1.0.0\build\VS2012\DirectShow.sln`，使用批生成即可：
 
-{% qnimg unreal4_2.png %}
+{% asset_img unreal4_2.png %}
 
 需要这么处理的库
 
@@ -84,4 +84,4 @@ ps. nvTextureTools中的nvtt项目使用了CUDA 5.0，而我机器上装的是5.
 
 将UE设为启动项目，运行文件为`Development Editor`和`Win64`，直接F5即可！
 
-{% qnimg unreal4_3.png %}
+{% asset_img unreal4_3.png %}

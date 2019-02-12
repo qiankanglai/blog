@@ -12,7 +12,7 @@ updated: 2016/3/22
 
 ** 申明: 我不会回答任何关于资源导出方面的问题。博客内容我单纯作为技术分享，并不想以此盈利，也不想惹麻烦。如果读者有志于学习渲染方面内容，我很乐意与大家交流学习，但是就本话题就此打住。 **
 
-{% qnimg adreno_mtj.png %}
+{% asset_img adreno_mtj.png %}
 
 由于这个工具是高通提供的，所以只能运行在高通芯片的安卓机上。为什么要强调这一点呢？其实其他厂商也有类似工具，但是从使用限制、方便程度上来说差太多了：
 
@@ -49,11 +49,11 @@ ps. 我习惯说Draw Call(DC)，工具里是Render Call，下文会混用...
 
 首先手机上打开游戏，运行到需要抓取的界面。然后在电脑打开Adreno Profiler，点左上角的Connect。这里有两种连接方式：手机直接插到电脑上，或者在同一个局域网内使用IP连接。准备好了之后点击Refresh，直至刷出对应的设备和应用：
 
-{% qnimg adreno_connect.png %}
+{% asset_img adreno_connect.png %}
 
 双击连接之后，点击Scrubber GL弹出抓取界面，然后点击Capture Frame等待即可
 
-{% qnimg adreno_connect2.png %}
+{% asset_img adreno_connect2.png %}
 
 这样其实就完成了抓取工作，是不是感觉so easy! 下面将从例子出发，介绍具体的使用。
 
@@ -63,29 +63,29 @@ ps. 我习惯说Draw Call(DC)，工具里是Render Call，下文会混用...
 
 这个工具使用非常简单，核心是左下角的Render Calls。它其实是抓取了一帧中所有GL部分的调用及相关数据，然后按照绘制命令组织。当选中不同的Render Call时，工具会显示从一开始到这一个命令的绘制结果，方便看到每一个中间过程。此外，在API Calls中，还可以看到每一个Render Call之前的其他命令，包括各种对GL状态机的修改：
 
-{% qnimg adreno_api_calls.png %}
+{% asset_img adreno_api_calls.png %}
 
 从图中可以看到，在这个绘制动作前，对模板状态进行了设置，然后传了一些Uniform，并修改了顶点属性~更方便的是，具体的顶点数据什么也能直接看到！
 
-{% qnimg adreno_vertex_data.png %}
+{% asset_img adreno_vertex_data.png %}
 
 ## 如何查看、导出资源
 
 就纹理来说，在右边可以看到所有显存里的纹理资源，点开可以看到具体的纹理参数和缩略图。在上面有一个小的按钮，可以将所有纹理都保存成一个个文件：
 
-{% qnimg adreno_textures.png %}
+{% asset_img adreno_textures.png %}
 
 就Shader来说，同样也是可以看到所有Program，工具还会贴心的标出所有利用了该Shader的Render Call，下面可以看到反汇编出来的指令：
 
-{% qnimg adreno_shaders.png %}
+{% asset_img adreno_shaders.png %}
 
 就模型来说，选中一个Render Call然后Save Vertex Data就可以导出obj，但是生成的文件还需要稍微修改下才能导入，具体打开看看就懂了~
 
-{% qnimg adreno_obj.png %}
+{% asset_img adreno_obj.png %}
 
 我曾经把驯龙高手的地形导出之后放到Unity，毫无压力-。-
 
-{% qnimg adreno_dragons.jpg %}
+{% asset_img adreno_dragons.jpg %}
 
 # 进阶使用
 
@@ -112,11 +112,11 @@ ps. 我习惯说Draw Call(DC)，工具里是Render Call，下文会混用...
 
 此外，Adreno Profiler还提供了Graph工具，可以看到应用的许多性能信息，用来对比不同游戏场景下负载：
 
-{% qnimg adreno_graph.png %}
+{% asset_img adreno_graph.png %}
 
 工具本身也提供了一些建议供参考：
 
-{% qnimg adreno_suggestions.png %}
+{% asset_img adreno_suggestions.png %}
 
 ## 聚爆特效分析
 
@@ -124,16 +124,16 @@ ps. 我习惯说Draw Call(DC)，工具里是Render Call，下文会混用...
 
 在介绍如何绘制被遮挡部分的特效，用了一个小技巧：查看GL Context状态机，这里就可以看到ztest被改成了GREATER，也就是绘制完场景之后直接绘制被挡住的部分~
 
-{% qnimg adreno_gl_context.jpg %}
+{% asset_img adreno_gl_context.jpg %}
 
 当然，还可以点击上方的Depth切换出zbuffer查看
 
-{% qnimg adreno_depth.jpg %}
+{% asset_img adreno_depth.jpg %}
 
 解释刀光特效的时候，主要靠经验积累，大概看下绘制的中间结果就猜出来了-。-
 本质还是一个很简单的特效。亮点在于绘制第二道刀光时，先绘制了整个场景，然后对其进行了一定的扭曲~
 
-{% qnimg adreno_distort.jpg %}
+{% asset_img adreno_distort.jpg %}
 
 Adreno Profiler提供了一些很方便的可视化功能，譬如选中一个纹理或者Shader，可以标记出所有使用该资源的Render Call；选中Render Call的时候会在屏幕上标记其绘制效果~
 

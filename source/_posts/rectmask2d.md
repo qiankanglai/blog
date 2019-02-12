@@ -11,7 +11,7 @@ RectMask2D在Unity 5.1/5.2里有个BUG(现在已修复)，今天又有朋友在�
 
 <!--more-->
 
-{% qnimg rectmask2d_bug.jpg %}
+{% asset_img rectmask2d_bug.jpg %}
 
 这个我之前在官方论坛报过[UGUI 5.2: Rect Mask 2D has BUG! be careful](https://forum.unity3d.com/threads/ugui-5-2-rect-mask-2d-has-bug-be-careful.391040/)，问题出现的原因是：某个元素被RectMask2D裁剪过之后，再次移回Mask里依然保持着被裁剪的状态，所以无法显示。
 

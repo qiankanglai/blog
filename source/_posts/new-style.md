@@ -9,6 +9,6 @@ toc: false
 
 <!--more-->
 
-{% qnimg old_style3.png %}
+{% asset_img old_style3.png %}
 
 新的theme最大的优点是左边的navigation很符合我心意，还有直接的background image支持...升级过程中就是修改了一些设置，保证`permalink`一致，从而Disqus能和原来一样使用~
