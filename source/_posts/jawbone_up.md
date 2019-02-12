@@ -17,13 +17,13 @@ toc: false
 
 开箱图(保鲜膜，真是简陋啊):
 
-{% asset_img jawbone0.png %}
+{% asset_img jawbone0.jpg %}
 
 经过一段时间的使用，戴在手上习惯了还是很好的！我大概两天同步一次
 
-{% asset_img jawbone1.png %}
+{% asset_img jawbone1.jpg %}
 
-{% asset_img jawbone2.png %}
+{% asset_img jawbone2.jpg %}
 
 这样日积月累下来，还能对自己的身体状况有所了解(所谓大数据的魅力么，括弧笑~)。从现在来看我每天的睡眠都不足啊，极少有超过8小时。走路步数的话主要靠平时锻炼，骑车比走路多多了~昨天刚和猴子、梓佳等人在红螺寺爬了一次山，第一次一天的步数破万(虽然说这是推荐的每天步数，o(╯□╰)o)。
 

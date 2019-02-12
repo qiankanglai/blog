@@ -27,11 +27,11 @@ void cvPyrMeanShiftFiltering( const CvArr* src, CvArr* dst, double sp, double sr
 
 速度倒是很快，但是边缘很粗糙([stackoverflow](http://stackoverflow.com/questions/9645713/whats-the-difference-between-edison-and-cvpyrmeanshiftfiltering))。可以看到和论文作者提供的代码相比，滤波效果很糟糕(左侧图明显好于右侧图)。
 
-{% asset_img meanshift1.png %}
+{% asset_img meanshift1.jpg %}
 
 后来网上找了下，看到[Java代码](http://rsbweb.nih.gov/ij/plugins/download/Mean_Shift.java)，将颜色空间转换之后效果好多了。
 
-{% asset_img meanshift2.png %}
+{% asset_img meanshift2.jpg %}
 
 ## OpenCV自带颜色变换
 
@@ -59,11 +59,11 @@ void cvCvtColor(const CvArr* src, CvArr* dst, int code)
 
 原始输入图：
 
-{% asset_img meanshift_input.png %}
+{% asset_img meanshift_input.jpg %}
 
 效果图(左侧为滤波结果，右侧为随机着色)：
 
-{% asset_img meanshift_result.png %}
+{% asset_img meanshift_result.jpg %}
 
 # Update
 

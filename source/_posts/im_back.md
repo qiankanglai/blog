@@ -13,7 +13,7 @@ toc: false
 
 ps.现在看之前自己的样式确实挺猎奇
 
-{% asset_img old_style2.png %}
+{% asset_img old_style2.jpg %}
 
 接下来预定的安排是很早就想记录的一个applescript的日志，外加最近两周的JawBone UP使用体验。Fight on!
 

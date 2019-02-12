@@ -3,7 +3,7 @@ layout: post
 title: HIT图形分析
 date: 2016/12/2
 tags: Unreal
-thumbnail: /images/teaser/hit.png
+thumbnail: /images/teaser/hit.jpg
 ---
 
 填坑向...之前和群里一个朋友讨论HIT的影子是咋实现的，后来验证了下发现自己之前想错了(逃。后来还看了下它的Bloom做法，效果还是挺好的。这里大力感谢@Hinatia和@LeLe给予的帮助和点拨，嘿嘿
@@ -16,11 +16,11 @@ thumbnail: /images/teaser/hit.png
 
 这里讲真，一开始我把HIT的影子当成{% post_link unity-projector %}一样的做法，主要就是受到了这个图的“误导”。抓了下帧发现，一开始是只有角色绘制到一张depth texture
 
-{% asset_img hit_shadow_caster.png %}
+{% asset_img hit_shadow_caster.jpg %}
 
 在绘制影子的时候，只有部分场景能接受影子：我感觉是只有地面部分，像周围栏杆什么都是不受到动态阴影影响的。在绘制地面的时候有个传到shader的参数设为1，会读取shadowmap计算；否则是0，只要计算本身受到实时光和lightmap影响即可。
 
-{% asset_img hit_shadow_receive.png %}
+{% asset_img hit_shadow_receive.jpg %}
 
 ## UE4实现
 

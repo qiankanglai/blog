@@ -78,15 +78,15 @@ $.ajax({
 window.open ("https://www.kuaipan.cn/api.php?ac=open&op=authorise&oauth_token="+oauth_token,"auth"); 
 {% endcodeblock %}
 
-{% asset_img kuaipan_1.png %}
+{% asset_img kuaipan_1.jpg %}
 
 打开弹窗并登陆
 
-{% asset_img kuaipan_2.png %}
+{% asset_img kuaipan_2.jpg %}
 
 看到验证码，然后回到test.html页面输入验证
 
-{% asset_img kuaipan_3.png %}
+{% asset_img kuaipan_3.jpg %}
 
 ps.这一步暂时我只能做到这样，需要用户手动输入验证码。纯JS我暂时没想到怎么解决，即让用户登录之后自动关闭弹出窗口并父窗口进行下一步。
 
@@ -128,7 +128,7 @@ $.ajax({
 
 其他的就是和第一步一样的，最后返回取得的oauth_toekn和oauth_token_secret。至此三步oauth验证完成！
 
-{% asset_img kuaipan_4.png %}
+{% asset_img kuaipan_4.jpg %}
 
 # To Be Continued...
 

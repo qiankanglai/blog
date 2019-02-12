@@ -22,7 +22,7 @@ tags: Java
 
 新建一个class，继承**AbstractJavaSamplerClient**，接下来就是重点了
 
-{% asset_img jmeter1.png %}
+{% asset_img jmeter1.jpg %}
 
 {% codeblock lang:java %}
 public class FriendCodeSampler extends AbstractJavaSamplerClient{
@@ -60,7 +60,7 @@ public class FriendCodeSampler extends AbstractJavaSamplerClient{
 
 在JMeter中建立如图测试方案
 
-{% asset_img jmeter2.png %}
+{% asset_img jmeter2.jpg %}
 
 JMeter的测试方案是一个树状结构，很好理解。下面具体解释我用到的几个节点。
 
@@ -86,10 +86,10 @@ JMeter的测试方案是一个树状结构，很好理解。下面具体解释�
 
 在Java Request中，首先选中我们之前定义好的Classname，下面就会有一系列的参数让我们手动改。注意**${username}**这样的形式，是指从之前User Defined Variables等地方读取名为username的参数。
 
-{% asset_img jmeter3.png %}
+{% asset_img jmeter3.jpg %}
 
 ## Result
 
 全部搞定之后，别忘了在Thread Group中加入Aggregate Graph等Listener，进行结果的监听：
 
-{% asset_img jmeter4.png %}
+{% asset_img jmeter4.jpg %}

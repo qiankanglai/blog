@@ -3,7 +3,7 @@ layout: post
 title: Unite 2016 精品Asset Store插件推荐
 date: 2016/4/13
 tags: Unity
-thumbnail: /images/teaser/unity_asset_store.png
+thumbnail: /images/teaser/unity_asset_store.jpg
 ---
 
 可以扫一眼，也许有用得上的

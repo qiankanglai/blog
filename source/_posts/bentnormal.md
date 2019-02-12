@@ -2,14 +2,14 @@
 title: Unity试水Bent Normal
 date: 2018-07-16 12:44:39
 tags: [Unity]
-thumbnail: /images/teaser/bentnormal.png
+thumbnail: /images/teaser/bentnormal.jpg
 ---
 
 最近半年赶项目的事情一直很忙，好不容易上周末的时候有空做点渲染的东西玩，于是尝试了一下[Bent Normal Maps](https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/BentNormalMaps)。
 
 这是UE 4.17发布的功能之一，可以拿来解决间接光照漏光；工具部分Substaince Designer已经支持[利用高模烘焙Bent Normal](https://support.allegorithmic.com/documentation/display/SDDOC/Bent+Normals+from+mesh)。效果图对比来自UE4文档：
 
-{% asset_img bentnormal_ue4.png %}
+{% asset_img bentnormal_ue4.jpg %}
 
 <!--more-->
 
@@ -33,7 +33,7 @@ GPU Gems里提到的是*This method is based on a view-independent preprocess th
 
 - 生成一个球状平行光分布(真正烘焙的时候会比这个密很多)
 
-{% asset_img bentnormal_lights.png %}
+{% asset_img bentnormal_lights.jpg %}
 
 - 每次从不同角度渲染物体，利用Shadow Map可以得到每个像素可见性。有几个需要注意的地方：
   - 输出到2UV(这个技巧可以参考之前博客 {% post_link sgmodelinspector %})，记得关掉Cull/ZTest等；
@@ -41,7 +41,7 @@ GPU Gems里提到的是*This method is based on a view-independent preprocess th
   - 不要用Screen Space Shadow；
   - 注意相机位置、模型大小，让Shadow Map利用率最高；
 
-{% asset_img bentnormal_uv2.png %}
+{% asset_img bentnormal_uv2.jpg %}
 
 ps. 我一开始是使用`Graphics.DrawMeshNow`直接绘制到RenderTexture的，后来发现很多变量引擎不会自动传过去特别闹心... 最后换了个路子，直接设置`Camera.targetTexture`然后`Camera.Render`省心多了。
 
@@ -61,7 +61,7 @@ ps. 我一开始是使用`Graphics.DrawMeshNow`直接绘制到RenderTexture的�
 
 不过好处也是有的：Substaince Designer导出的是normalized Bent Normal；我自己生成的时候B通道拿来存了AO Strength，还可以当成Mesh AO使用。另外就是在Unity里烘焙确实流程简单+迭代起来快。 放在自己项目里比较了下背光时候Diffuse IBL部分的效果(暂时只用了天光地光)，因为法线平滑了很多所以漏光好了很多：
 
-{% asset_img bentnormal_result.png %}
+{% asset_img bentnormal_result.jpg %}
 
 # 未来工作
 

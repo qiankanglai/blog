@@ -3,7 +3,7 @@ layout: post
 title: 优化Unity项目编译速度-后续
 date: 2016/12/3
 tags: Unity
-thumbnail: /images/teaser/compiler_complaint.png
+thumbnail: /images/teaser/compiler_complaint.jpg
 ---
 
 {% post_link unity-compiler %}后续篇...感谢@wxp提供的非常有用的反馈！之前在优化编译速度的时候，我试图dll化遇到的一个障碍是不同平台需要编译用宏区分的代码，但是guid/fileID不一致。结果发现我是完全**想当然**了，Unity竟然已经自动做好了映射(下面均为Unity 5.3.6测试结果，尚未找到相关文档...)！

@@ -4,7 +4,7 @@ title: Shader in AssetBundle
 date: 2017/1/29
 tags: Unity
 updated: 2017/2/14
-thumbnail: /images/teaser/ab_shader.png
+thumbnail: /images/teaser/ab_shader.jpg
 toc: false
 ---
 

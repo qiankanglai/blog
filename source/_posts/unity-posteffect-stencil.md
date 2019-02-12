@@ -15,11 +15,11 @@ Here is an example for fast Bloom:
 
 W/O Stencil: 
 
-{% asset_img unity_pp_stencil_off.png %}
+{% asset_img unity_pp_stencil_off.jpg %}
 
 With Stencil(Ocean Only): 
 
-{% asset_img unity_pp_stencil_on.png %}
+{% asset_img unity_pp_stencil_on.jpg %}
 
 The key idea is keeping the depth buffer (along with stencil) when rendering, with the help of `Graphics.SetRenderTarget`. First of all, create and set the camera render target. (I also tried depth bit as 16, which makes `RenderTexture.SupportsStencil` return false, and it still works. I don't know why...)
 
@@ -72,4 +72,4 @@ Stencil{
 
 ps. You could try draw to screen directly, without setting an extra `renderTexture`. Currently I am combining some Post Process together, along with dynamic resolution, which makes this unavoidable.
 
-{% asset_img unity_postprocesschain.png %}
+{% asset_img unity_postprocesschain.jpg %}

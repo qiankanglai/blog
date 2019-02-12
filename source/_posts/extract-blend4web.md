@@ -10,7 +10,7 @@ tags:
 
 <!--more-->
 
-{% asset_img blend4web1.png %}
+{% asset_img blend4web1.jpg %}
 
 我看了下这个网页，是用[blend4web](https://github.com/TriumphLLC/Blend4Web)转的，这个可以将blender里的模型很方便的通过WebGL输出到网页上(新技能GET)...所以稍微花了点时间研究了下，如何导出blend4web网页中的模型资源~
 
@@ -18,11 +18,11 @@ tags:
 
 第一步当然是找一下资源文件在哪里~用chrome的inspector network面板发现没有其他请求，然后查看了一下源代码，好大的页面……很容易就找到了看起来像是乱码的资源
 
-{% asset_img blend4web2.png %}
+{% asset_img blend4web2.jpg %}
 
 一开始非常逗比的试图去复制粘贴，结果把sublime挤爆了~于是再读了下代码发现这货其实是一个函数，因此机智的想到了chrome的控制台里有一个`copy`函数，可以将内容复制到剪贴板
 
-{% asset_img blend4web3.png %}
+{% asset_img blend4web3.jpg %}
 
 这样一步步就把这几个文件都单独保存出来了。
 
@@ -39,7 +39,7 @@ fs.writeFileSync('Joc_ML_Cap10_baseTexBaked2.dds',c2.toString('binary'),{"encodi
 
 妥妥的没问题
 
-{% asset_img blend4web_dds.png %}
+{% asset_img blend4web_dds.jpg %}
 
 # 解析模型
 
@@ -127,4 +127,4 @@ for(var faces = 0; faces < 100000; faces++){
 
 最后倒入unity表示没问题...
 
-{% asset_img blend4web4.png %}
+{% asset_img blend4web4.jpg %}

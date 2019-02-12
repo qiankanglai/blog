@@ -53,8 +53,8 @@ namespace ReflexilDemo
 }
 {% endcodeblock %}
 
-![](https://www.codeproject.com/KB/msil/reflexil/demoapp.png)
-![](https://www.codeproject.com/KB/msil/reflexil/demores.png)
+![](https://www.codeproject.com/KB/msil/reflexil/demoapp.jpg)
+![](https://www.codeproject.com/KB/msil/reflexil/demores.jpg)
 
 ## 使用指令编辑器
 
@@ -62,22 +62,22 @@ namespace ReflexilDemo
 
 为了达成这个目标，首先需要在栈里增加一个`ldstr`操作码，来存放一个string参数。
 
-![](https://www.codeproject.com/KB/msil/reflexil/methedt-create.png)
-![](https://www.codeproject.com/KB/msil/reflexil/inscreate.png)
+![](https://www.codeproject.com/KB/msil/reflexil/methedt-create.jpg)
+![](https://www.codeproject.com/KB/msil/reflexil/inscreate.jpg)
 
 接下来，通过修改函数里调用`MessageBox.Show`方法的指令，将刚才创建的string作为参数传进去。
 
-![](https://www.codeproject.com/KB/msil/reflexil/methedt-edit.png)
-![](https://www.codeproject.com/KB/msil/reflexil/insedit.png)
-![](https://www.codeproject.com/KB/msil/reflexil/methsel.png)
+![](https://www.codeproject.com/KB/msil/reflexil/methedt-edit.jpg)
+![](https://www.codeproject.com/KB/msil/reflexil/insedit.jpg)
+![](https://www.codeproject.com/KB/msil/reflexil/methsel.jpg)
 
 最后保存我们刚才的修改，然后测试一下新的程序集。
 
-![](https://www.codeproject.com/KB/msil/reflexil/modsave.png $}
+![](https://www.codeproject.com/KB/msil/reflexil/modsave.jpg $}
 
 可以看到保存过的程序能正常显示标题，说明它使用了新的重载函数，并将正确的参数传进去了。
 
-![](https://www.codeproject.com/KB/msil/reflexil/demoresult.png)
+![](https://www.codeproject.com/KB/msil/reflexil/demoresult.jpg)
 
 ## 指令编辑器功能特性
 
@@ -97,23 +97,23 @@ namespace ReflexilDemo
 
 通过下图所示配置表，你可以选择适合的诸如语言以及输入、显示的进制设置：
 
-![](https://www.codeproject.com/KB/msil/reflexil/configuration.png)
+![](https://www.codeproject.com/KB/msil/reflexil/configuration.jpg)
 
 下面使用"替换所有代码"来修改`ComputeAndDisplay`函数主体：
 
-![](https://www.codeproject.com/KB/msil/reflexil/methedt-inject.png)
+![](https://www.codeproject.com/KB/msil/reflexil/methedt-inject.jpg)
 
 在弹出的编译窗口中，我们能直接查看到结果IL code；在这个窗口中提供了基本的智能感知：
 
-![](https://www.codeproject.com/KB/msil/reflexil/inject-cs.png)
+![](https://www.codeproject.com/KB/msil/reflexil/inject-cs.jpg)
 
 当然，我们也能通过VB.NET语言进行修改。注意在这个简单例子中，我们在两种语言下得到了完全相同的IL code(但这个并不一定始终成立)：
 
-![](https://www.codeproject.com/KB/msil/reflexil/inject-vb.png)
+![](https://www.codeproject.com/KB/msil/reflexil/inject-vb.jpg)
 
 最后我们保存、测试一下修改结果：
 
-![](https://www.codeproject.com/KB/msil/reflexil/demoresult-inject.png)
+![](https://www.codeproject.com/KB/msil/reflexil/demoresult-inject.jpg)
 
 ## C#/VB.NET代码注入功能特性
 
@@ -123,11 +123,11 @@ namespace ReflexilDemo
 
 通过这个编辑器能够很轻松的修改方法签名或可见范围，也可以修改返回类型：
 
-![](https://www.codeproject.com/KB/msil/reflexil/methattr.png)
+![](https://www.codeproject.com/KB/msil/reflexil/methattr.jpg)
 
 方法参数及变量也是可编辑的。Reflexil能够载入(MDB、PDB等文件提供的)符号信息，来显示原始变量名：
 
-![](https://www.codeproject.com/KB/msil/reflexil/paramattr.png)
+![](https://www.codeproject.com/KB/msil/reflexil/paramattr.jpg)
 
 ## 异常处理
 
@@ -138,61 +138,61 @@ namespace ReflexilDemo
 - `Finally`
 - `Fault`
 
-![](https://www.codeproject.com/KB/msil/reflexil/exception.png)
+![](https://www.codeproject.com/KB/msil/reflexil/exception.jpg)
 
 ## 类型标签编辑器
 
 类似方法，变量的可见域也是可以修改的，譬如说将一个`private`变量暴露出来：
 
-![](https://www.codeproject.com/KB/msil/reflexil/typeedt.png)
+![](https://www.codeproject.com/KB/msil/reflexil/typeedt.jpg)
 
 ## 操作成员
 
 **Reflexil**能够对类、接口、结构体、枚举、事件、方法、构造函数、属性或引用进行重命名、删除或插入操作。
 
-![](https://www.codeproject.com/KB/msil/reflexil/injmenu.png)
+![](https://www.codeproject.com/KB/msil/reflexil/injmenu.jpg)
 
 智能插入：插入一个属性(property)会生成一个字段(field)及对应的getter/setter方法。
 
-![](https://www.codeproject.com/KB/msil/reflexil/injprop.png)
+![](https://www.codeproject.com/KB/msil/reflexil/injprop.jpg)
 
 ## 资源编辑器
 
 可以修改或插入内嵌资源、链接资源和程序集链接资源，并提供了一个完整的十六进制编辑器来更新、导入或导出文件。
 
-![](https://www.codeproject.com/KB/msil/reflexil/resources.png)
+![](https://www.codeproject.com/KB/msil/reflexil/resources.jpg)
 
 ## 自定义标签编辑器
 
 完全支持自定义标签
 
-![](https://www.codeproject.com/KB/msil/reflexil/custattr.png)
+![](https://www.codeproject.com/KB/msil/reflexil/custattr.jpg)
 
 ## 程序集及引用编辑器
 
 可修改程序入口
 
-![](https://www.codeproject.com/KB/msil/reflexil/asmdef.png)
+![](https://www.codeproject.com/KB/msil/reflexil/asmdef.jpg)
 
 也可以更新关于认证的所有信息：版本号，公钥，名字和区域信息。当然你也可以修改引用的资源从而使用不同版本内容：
 
-![](https://www.codeproject.com/KB/msil/reflexil/asmnamedef.png)
+![](https://www.codeproject.com/KB/msil/reflexil/asmnamedef.jpg)
 
 ## 模块编辑器
 
 可用来修改应用类型，譬如从可执行程序变成DLL库：
 
-![](https://www.codeproject.com/KB/msil/reflexil/moddef.png)
+![](https://www.codeproject.com/KB/msil/reflexil/moddef.jpg)
 
 ## 程序集签名支持
 
 当原程序集自带签名时，保存出来的修改后程序集是"延迟签名"状态。**Reflexil**能调用SDK工具来修复这个问题。
 
-![](https://www.codeproject.com/KB/msil/reflexil/signed.png)
+![](https://www.codeproject.com/KB/msil/reflexil/signed.jpg)
 
 **Reflexil**能自动移除程序集强命名或更新其引用资源。当然你也可以手动完成：移除公钥后将`HasPublicKey`设为`false`即可：
 
-![](https://www.codeproject.com/KB/msil/reflexil/snremover.png)
+![](https://www.codeproject.com/KB/msil/reflexil/snremover.jpg)
 
 <del>由于这块实在没用过，所以这段翻译的可信度较低...逃</del>
 
@@ -200,19 +200,19 @@ namespace ReflexilDemo
 
 **Reflexil**使用了**de4dot**进行反混淆：
 
-![](https://www.codeproject.com/KB/msil/reflexil/obfsearch.png)
+![](https://www.codeproject.com/KB/msil/reflexil/obfsearch.jpg)
 
 支持Babel NET, CliSecure, CodeFort, CodeVeil, CodeWall, CryptoObfuscator, DeepSea, Dotfuscator, dotNET Reactor, Eazfuscator NET, Goliath NET, ILProtector, MaxtoCode, MPRESS, Rummage, Skater NET, SmartAssembly, Spices Net和Xenocode。
 
-![](https://www.codeproject.com/KB/msil/reflexil/obffound.png)
-![](https://www.codeproject.com/KB/msil/reflexil/obfclean.png)
+![](https://www.codeproject.com/KB/msil/reflexil/obffound.jpg)
+![](https://www.codeproject.com/KB/msil/reflexil/obfclean.jpg)
 
 ## 程序集验证
 
 通过使用.NET SDK自带的`peverify.exe`，可以检查生成的IL code和对应原信息是否满足类型安全的需要。
 
-![](https://www.codeproject.com/KB/msil/reflexil/asmcheck.png)
-![](https://www.codeproject.com/KB/msil/reflexil/asmcheckok.png)
+![](https://www.codeproject.com/KB/msil/reflexil/asmcheck.jpg)
+![](https://www.codeproject.com/KB/msil/reflexil/asmcheckok.jpg)
 
 # 总结
 

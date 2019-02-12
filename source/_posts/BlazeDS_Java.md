@@ -15,19 +15,19 @@ tags: Java
 
 在FlashBuilder中，我一开始是选择的Flex项目进行测试(因为纯actionscript项目使用BlazeDS会麻烦非常多，容后再表)。在建立项目的时候可以选择服务器技术-BlazeDS:
 
-{% asset_img BlazeDS_cannotconnect.png %}
+{% asset_img BlazeDS_cannotconnect.jpg %}
 
 提示说**“无法访问 Web 服务器。服务器可能没有运行，或者 Web 根文件夹或根 URL 可能无效”**，但实际上是已经在Eclipse里面运行了服务器。这就是我纠结的第一个问题。
 
 后来发现，Eclipse WTP在默认部署的时候，是将网站部署到workspace metadata文件夹；Flex在验证服务器的时候，很有可能是在文件夹里添加某些内容然后尝试远程访问——这个很像Google site这样上传随机文件的样子。然而用过的人都知道，WTP在刷新服务器内容的时候是有时间差的(譬如修改了代码，会提示同步中...)，这就是问题所在。最后我通过将网站部署位置修改到tomcat文件夹下来解决:
 
-{% asset_img blazeDS_tomcat.png %}
+{% asset_img blazeDS_tomcat.jpg %}
 
 # 修改默认tomcat部署位置
 
 通常情况下，会发现这些内容都是灰色的！我是通过删除tomcat服务器下的网站，清理之后重新打开，就如下图所示，可以修改了
 
-{% asset_img blazeDS_tomcat2.png %}
+{% asset_img blazeDS_tomcat2.jpg %}
 
 将部署位置修改以后，FlashBuilder表示能正常连上了~
 

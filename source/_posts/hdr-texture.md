@@ -30,11 +30,11 @@ public static Color DecodeRGBM(Color color, float multiplier = 5, float gamma = 
 
 之前一直被坑是因为显示上和Photoshop一致，导致我以为值应该没问题才对。
 
-{% asset_img hdr_texture_photoshop.png %}
+{% asset_img hdr_texture_photoshop.jpg %}
 
 后来对比了下UE4直接就是强制非sRGB(谁能告诉我>1的纹理为什么需要Gamma??)
 
-{% asset_img hdr_texture_ue4.png %}
+{% asset_img hdr_texture_ue4.jpg %}
 
 ps. Unity自己卷积出来的Specular (Glossy)亮度上是没问题的，但是看颜色有一些奇怪的色偏...暂时还没精力去进一步校正。
 

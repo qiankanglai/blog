@@ -3,7 +3,7 @@ layout: post
 title: SDF字体
 date: 2015/12/5
 tags : [Unity, KlayGE]
-thumbnail: /images/teaser/textmeshpro.png
+thumbnail: /images/teaser/textmeshpro.jpg
 toc: false
 ---
 
@@ -18,7 +18,7 @@ toc: false
 
 导入游戏里比较了下，加上描边对比非常明显(项目里使用的是UGUI)。我们原来是通过很大的字号+很小的localScale来保持文字锐利的...
 
-{% asset_img unity_textmeshpro2.png %}
+{% asset_img unity_textmeshpro2.jpg %}
 
 唯一的遗憾是不支持动态生成SDF，作者有提到[在日程安排中](http://digitalnativestudios.com/forum/index.php?topic=169.0)。这个特性对于CJK来说还是挺重要的...
 

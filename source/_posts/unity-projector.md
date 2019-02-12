@@ -3,7 +3,7 @@ layout: post
 title: 利用Projector实现动态阴影
 date: 2016/11/14
 tags: Unity
-thumbnail: /images/teaser/projector_shadow.png
+thumbnail: /images/teaser/projector_shadow.jpg
 ---
 
 很早之前想整理的一篇内容，之前守护的时候利用Projector实现了动态的阴影(见Teaser)，接下来的几个项目目前也会用这个思路继续做下去。
@@ -45,6 +45,6 @@ thumbnail: /images/teaser/projector_shadow.png
 
 当然，还有进一步优化的方法。我在另一个项目里直接使用了低模作为Geometry Proxy，降低Cast Shadow的消耗；另外有个插件[Fast Shadow Receiver](https://www.assetstore.unity3d.com/en/#!/content/20094)可以显著降低Receive Shadow消耗：
 
-{% asset_img fastshadowreceiver.png %}
+{% asset_img fastshadowreceiver.jpg %}
 
 原理也非常简单粗暴：直接生成一个Mesh来接受影子，对肯定接受不到的部分就不参与绘制。这个插件牛的地方在于它同时实现了Plane级别的接受和Mesh级别的，因为它直接实现了一个树形结构来保存Mesh信息，按需生成(目瞪口呆脸...)。譬如原来是一个复杂的场景接收影子的话就需要重绘整个模型，现在只需要绘制一小部分的网格就可以了～

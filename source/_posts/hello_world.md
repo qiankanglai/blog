@@ -27,4 +27,4 @@ ps.为何买的域名都是第一年比之后便宜如此多呢
 
 2012-3-27:对整个网站的界面重新设计了一下：HYDE从0.5升级到0.8.4，很多需要修改的地方；因此正好重来。最近比较迷metro。
 
-{% asset_img old_style.png %}
+{% asset_img old_style.jpg %}

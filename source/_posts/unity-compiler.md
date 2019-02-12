@@ -3,7 +3,7 @@ layout: post
 title: 优化Unity项目编译速度
 date: 2016/11/27
 tags: Unity
-thumbnail: /images/teaser/goto.png
+thumbnail: /images/teaser/goto.jpg
 ---
 
 这个是最近一段时间带着子川一起做的一个小东西：如何优化大项目C#编译速度。这个idea主要是因为使用了slua之后，每次修改C#部分编译实在是太慢了... 下面将介绍两个不同的思路，心急的朋友可以直接看第二个解决方案及实战，因为这个说穿了其实就一句话，<del>写第一部分只不过是因为折腾了非常久的`MonoImporter/PluginImporter/MonoScript`结果发现没用上而不爽(逃</del>
@@ -44,7 +44,7 @@ public class FinishCompiling
 }
 {% endcodeblock %}
 
-{% asset_img unitycompile_timeanalyze.png %}
+{% asset_img unitycompile_timeanalyze.jpg %}
 
 测试的时候随便右键一个脚本-Reimport即可，这里我们要记下第一条数据：**原始版本slua 编译时间大概在20s左右**。
 
@@ -75,7 +75,7 @@ public class FinishCompiling
 
 这里必须使用文件来传递参数而不是直接在控制台传递过去的原因是Windows有一个奇葩限制 [Command prompt (Cmd. exe) command-line string limitation](https://support.microsoft.com/en-us/kb/830473)
 
-{% asset_img unitycompile_compile2dll.png %}
+{% asset_img unitycompile_compile2dll.jpg %}
 
 编译的时候我是根据文件夹去分Player/Editor两个版本的dll，搭配不同的宏和DLL引用。这里比较麻烦的是DLL部分，一方面要引入引擎相关的，此外还要引入项目里的`Library/ScriptAssemblies/Assembly-CSharp.dll`及其他非native的Plugin。编译完成之后删掉原来的cs文件导入新的dll就行了。
 
@@ -144,11 +144,11 @@ pss. 这里只是测试偷懒换了编译器，但是我个人不建议在实际
 
 使用了手头在优化的一个项目：原版编译时间大概23s左右
 
-{% asset_img unitycompile_test1.png %}
+{% asset_img unitycompile_test1.jpg %}
 
 新版本编译时间大概7s左右
 
-{% asset_img unitycompile_test2.png %}
+{% asset_img unitycompile_test2.jpg %}
 
 没错...说穿了就是**把包括插件在内的基本不会修改的代码挪到Standard Assets里就完事儿了**，经常修改的代码放在外面原地不动。这样唯一的一个限制是Standard Assets里的代码无法引用外面的代码，不过我这里全是放的插件，完全没有问题。
 

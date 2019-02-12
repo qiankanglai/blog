@@ -4,7 +4,7 @@ title: 利用shader_feature打造最小版本Shader
 date: 2016/9/25
 tags: Unity
 updated: 2016/12/1
-thumbnail: /images/teaser/shader_feature.png
+thumbnail: /images/teaser/shader_feature.jpg
 ---
 
 这个月终于腾出手为新项目做了一些Shader调整和优化工作，不知不觉就整出一个功能略多的"肥"Shader。所以我就在思考这么一个事情：如何维护这个Shader，以及如何在运行时尽可能减少无用的消耗。
@@ -30,7 +30,7 @@ thumbnail: /images/teaser/shader_feature.png
 
 | | 完整版本 | 精简版本 |
 | ----- | ----- | ----- |
-| | {% asset_img SGPBR.png %} | {% asset_img SGPBR2.png %} |
+| | {% asset_img SGPBR.jpg %} | {% asset_img SGPBR2.jpg %} |
 | vert | 43 | 43 |
 | frag | 81 | 50 |
 

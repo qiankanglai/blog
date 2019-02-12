@@ -21,13 +21,13 @@ tags: JavaScript
 
 ### 以下为程序运行图：
 
-{% asset_img threejs_2.1.png %}
+{% asset_img threejs_2.1.jpg %}
 整体运行图
 
-{% asset_img threejs_2.2.png %}
+{% asset_img threejs_2.2.jpg %}
 操作菜单栏
 
-{% asset_img threejs_2.3.png %}
+{% asset_img threejs_2.3.jpg %}
 操作工具栏
 
 ### 功能介绍
@@ -42,28 +42,28 @@ tags: JavaScript
 
 a)首先在窗口内添加一个点光源，并调整其位置和角度，当然也可以加入别的光源，并进行适当的调整，具体以模型显示时为准，此处仅作示范。
 
-{% asset_img threejs_3.1.png %}
+{% asset_img threejs_3.1.jpg %}
 
 b)添加一个正方体，调整其大小，位置，角度，颜色等信息。
 
-{% asset_img threejs_3.2.png %}
+{% asset_img threejs_3.2.jpg %}
 
 c)添加一个球体，调整其大小，位置，角度，颜色等信息，以方便观察为准，并调整两个体的位置，达到想要求交的位置。注意网页版程序中的形体可以选定，并可以移动和修改其信息哦！
 
-{% asset_img threejs_3.3.png %}
+{% asset_img threejs_3.3.jpg %}
 
 d)分将立方体设置为A，将球体设置为B，注意这里是不同于MFC演示程序的，前者将先拖入的形体记为A，后拖入的记为B，而此处可以设置。并且在选择后观察右侧“SCENE”处的记录信息。
 
-{% asset_img threejs_3.4.png %}
+{% asset_img threejs_3.4.jpg %}
 
 e)接下来就是选择布尔运算类型，观察结果啦，如下图是求差的结果，注意每一个新形体显示时，总是黑白色，选定形体后修改参数更改渲染效果。
  
-{% asset_img threejs_3.5.png %} 
+{% asset_img threejs_3.5.jpg %} 
 
 f)分步演示，分步演示首先需要选定右侧的“BO in Animation”，在设置好两个形体AB之后，选择布尔运算类型，再选择“Boolean”菜单最下方的“Next Animation”，就可以一步一步观察结果。
    
-{% asset_img threejs_3.6.png %} 
-{% asset_img threejs_3.7.png %}
-{% asset_img threejs_3.8.png %}
+{% asset_img threejs_3.6.jpg %} 
+{% asset_img threejs_3.7.jpg %}
+{% asset_img threejs_3.8.jpg %}
  
 更多功能细节请用户自行摸索，关于程序的更多测试用例请查看《MFC演示程序使用手册》，其中有详尽的测试图示。网页程序中，配合鼠标的拖拽动作、滚轮动作和键盘输入，会取得意想不到的效果哦！

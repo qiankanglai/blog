@@ -4,7 +4,7 @@ title: Android下利用Hook实现mono dll加密
 date: 2016/11/12
 tags: [Unity,Android]
 updated: 2016/11/21
-thumbnail: /images/teaser/cydiasubstrate.png
+thumbnail: /images/teaser/cydiasubstrate.jpg
 toc: false
 ---
 

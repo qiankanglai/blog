@@ -25,21 +25,21 @@ Real-Time Anti-Aliasing](http://iryoku.com/aacourse/)(很多sig course好棒好�
 
 Temporal AA: 
 
-{% asset_img unity_temporal_aa_on.png %}
+{% asset_img unity_temporal_aa_on.jpg %}
 
 W/O AA: 
 
-{% asset_img unity_temporal_aa_off.png %}
+{% asset_img unity_temporal_aa_off.jpg %}
 
 Nexus5真机
 
 | Temporal AA | W/O AA |
 |--------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| {% asset_img unity_android_temporal_aa_on.png %} | {% asset_img unity_android_temporal_aa_off.png %} |
+| {% asset_img unity_android_temporal_aa_on.jpg %} | {% asset_img unity_android_temporal_aa_off.jpg %} |
 
 放大出来还是能看出来的
 
-{% asset_img unity_android_temporal_aa_compare.png %}
+{% asset_img unity_android_temporal_aa_compare.jpg %}
 
 # 性能
 

@@ -3,7 +3,7 @@ layout: post
 title: Android 7升级须知
 date: 2016/11/14
 tags: Android
-thumbnail: /images/teaser/android7.png
+thumbnail: /images/teaser/android7.jpg
 ---
 
 最近守护要上GP，G家要求最好支持Android 24的targetSDK。然后硬生生周末被坑了两天...主要有两个问题需要强烈注意！

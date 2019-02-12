@@ -3,7 +3,7 @@ layout: post
 title: UUG分享 TextMesh Pro
 date: 2017/3/1
 tags: [Unity,UUG]
-thumbnail: /images/teaser/uug_textmeshpro.png
+thumbnail: /images/teaser/uug_textmeshpro.jpg
 toc: false
 ---
 

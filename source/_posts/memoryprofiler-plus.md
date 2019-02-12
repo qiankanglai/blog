@@ -2,7 +2,7 @@
 title: 让MemoryProfiler变得更强
 date: 2017-11-18 19:20:41
 tags: Unity
-thumbnail: /images/teaser/memoryprofiler_plus.png
+thumbnail: /images/teaser/memoryprofiler_plus.jpg
 ---
 
 之前其实在{% post_link csharp-reflections %}里提到过Profiler的增强；后来官方提供了更加方便的[MemoryProfiler](https://bitbucket.org/Unity-Technologies/memoryprofiler)，上周末的时候顺手用类似的思路增加了diff功能并进行了一定的优化。~~原来那个ProfilerDiff就直接废弃，毕竟当时懒了没做序列化~~

@@ -22,13 +22,13 @@ tags: Unity
 
 光滑组理解之后，就可以理解Unity导入模型的几个设置了
 
-{% asset_img unity_import_mesh.png %}
+{% asset_img unity_import_mesh.jpg %}
 
 主要是Normals这个选项：如果选用Import，表示直接读取模型文件里的数据，包括光滑组信息和法线(有时候美术可能人肉压法线，达到一些特殊效果)，此时Smoothing Angle是无效的；如果是Calculate就表示重新计算法线，这里有一个特别坑的地方就是根据Smoothing Angle，引擎会**重新计算“光滑组”**，而且是在**MAX导出的基础上**，也就是说就算美术导出的模型是只有一个光滑组，在这里的设置也可能导致其某些顶点分裂。
 
 ps. 做描边效果的时候，必须保证美术导出的模型是没有分裂顶点，同时Unity也没有分裂(Smoothing Angle拉到180即可)，不然背面膨胀的时候就有产生缝隙。
 
-{% asset_img unity_import_mesh2.png %}
+{% asset_img unity_import_mesh2.jpg %}
 
 # 2UV：如何有效自动分割
 
@@ -36,14 +36,14 @@ ps. 做描边效果的时候，必须保证美术导出的模型是没有分裂�
 
 默认参数的效果，可以看到有几块侧面被分到外面了
 
-{% asset_img lightmap_2uv_old.png %}
+{% asset_img lightmap_2uv_old.jpg %}
 
 改大Angle Error的效果，可以看到一个相对比较理想的结果，侧面围绕底面一圈
 
-{% asset_img lightmap_2uv_new.png %}
+{% asset_img lightmap_2uv_new.jpg %}
 
 批量改了之后，烘焙出来的一些奇怪的硬边(下图右)就消失啦~
 
-{% asset_img lightmap_2uv_compare.png %}
+{% asset_img lightmap_2uv_compare.jpg %}
 
 ps. 在Lighting面板里，还有所谓的Preserve UVs和Auto UV几个选项，这个应该是Enlighten对2UV的再次加工(不管是来自模型还是引擎自动分的2UV)，不过这里我就没有细看了...

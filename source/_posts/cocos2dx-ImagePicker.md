@@ -17,7 +17,7 @@ ps. I made a Pull Request to cocos before and it seems they don't need it. So I 
 
 | Android | iOS |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| {% asset_img imagepicker_android.png %} | {% asset_img imagepicker_ios.png %} |
+| {% asset_img imagepicker_android.jpg %} | {% asset_img imagepicker_ios.jpg %} |
 
 ### update 1
 

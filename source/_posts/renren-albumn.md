@@ -14,4 +14,4 @@ toc: false
 
 貌似现在chrome不支持第三方包直接安装，所以就不放crx了~进入相册页面之后，右上角会出现一个`Download Album`点一下即可使用。
 
-{% asset_img renren-albumn.png %}
+{% asset_img renren-albumn.jpg %}

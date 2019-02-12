@@ -11,25 +11,25 @@ toc: false
 
 <!--more-->
 
-{% asset_img polygon_mode_sprites.png %}
+{% asset_img polygon_mode_sprites.jpg %}
 
 当然，目前Unity只在Sprite Render里支持了这个模式，在UGUI的Image中还无法正常使用。官方论坛其实也有提到这个[THE 5.3 "POLYGON SPRITE MODE" SHOULD BE UTILIZED BY THE UI "IMAGE" COMPONENT.](https://feedback.unity3d.com/suggestions/the-5-dot-3-polygon-sprite-mode-should-be-utilized-by-the-ui-image-component)，但是还没有反馈~
 
 | 原图 | 线框模式 |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| {% asset_img polygon_mode_origin.png %} | {% asset_img polygon_mode_origin_wireframe.png %} |
+| {% asset_img polygon_mode_origin.jpg %} | {% asset_img polygon_mode_origin_wireframe.jpg %} |
 
 我对照UGUI代码中的Image.cs看了一下，发现其实只要能搞定生成顶点部分的代码，使用具体的Polygon而不是俩三角形就能搞定。而且原生的Sprite Render都能直接读取Texture Packer的数据，没道理我自己写解决不了...最后在`UnityEngine.Sprite.vertices`和`UnityEngine.Sprite.triangles`找到了对应的数据
 
 | 原图 | 线框模式 |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| {% asset_img polygon_mode_new.png %} | {% asset_img polygon_mode_new_wireframe.png %} |
+| {% asset_img polygon_mode_new.jpg %} | {% asset_img polygon_mode_new_wireframe.jpg %} |
 
 当然，和原来的方法相比，绘制的Verts和Tris会略多(由于大部分图片都是矩形的，少部分不规则，其实这种情况并不多)；好处是能节约不少图片，以我们项目举例：原来要2.5张2048贴图，利用这个方法能压到1.7张左右。
 
 ps. Super Cell的游戏貌似都是这种用法，贴图非常的紧致，当时看COC的时候就惊艳到了~我随便用红色圈出了一个梯形，可以看到周围很紧密的排列。
 
-{% asset_img polygon_mode_cr.png %}
+{% asset_img polygon_mode_cr.jpg %}
 
 附代码(Unity 5.1.4/5.2.4/5.3.3测试通过)
 

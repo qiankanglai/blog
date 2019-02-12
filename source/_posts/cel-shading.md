@@ -37,7 +37,7 @@ toc: false
 
 当然多画8个精灵会有更多性能消耗，但是如果你只是针对小区域这么干的话完全没问题。另外你也能从这个技术里获取很多优势！
 
-![](https://data.simonschreibt.de/gat007/update2/advantages.png)
+![](https://data.simonschreibt.de/gat007/update2/advantages.jpg)
 
 我用PS做了一个『完美』的描边效果作为对比，可以看到刚才的思路能做出很棒的头发剪影效果：
 
@@ -45,11 +45,11 @@ toc: false
 
 同时这个方法也支持渐隐(注意下图手腕部分)
 
-![](https://data.simonschreibt.de/gat007/update2/moveordie_outline_advantage02.png)
+![](https://data.simonschreibt.de/gat007/update2/moveordie_outline_advantage02.jpg)
 
 最后是最重要的特点，也是我最喜欢的: 普通的点可以映射成小花的形状！
 
-![](https://data.simonschreibt.de/gat007/update2/moveordie_outline_advantage03.png)
+![](https://data.simonschreibt.de/gat007/update2/moveordie_outline_advantage03.jpg)
 
 (译注: 其实这个小花我后来问了下，就是一个圆点上下左右这样移动8次组成的...我一开始理解成可以映射成任意形状)
 

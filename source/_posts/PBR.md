@@ -14,16 +14,16 @@ toc: false
 话说虽然Unity 5已经提供了PBR，而且还有Skyshop这种插件(见[unity3d 基于物理渲染的问题解决](http://www.cnblogs.com/TracePlus/p/4070974.html))；出于练手，我还是参考UE4在Unity 4.6里山寨了一发。做的时候需要打开线性空间、HDR和Tone Mapping，才能看得出效果~另外UE4里的ambient cubemap是用的hdr格式，而我在Unity里是转换到dds cubemap了，所以表现力下降了不少。
 
 粗糙度不变，金属度增大: 
-{% asset_img PBR_metallic.png %}
+{% asset_img PBR_metallic.jpg %}
 
 金属度不变，粗糙度增大: 
-{% asset_img PBR_roughness.png %}
+{% asset_img PBR_roughness.jpg %}
 
 山寨UE4效果: 
-{% asset_img PBR_metal.png %}
+{% asset_img PBR_metal.jpg %}
 
 Vehicle: 
-{% asset_img PBR_vehicle.png %}
+{% asset_img PBR_vehicle.jpg %}
 
 只能说看得出这个意思吧...不过效率还是有点费。于是我尝试了使用烘焙，结果发现两个问题：
 
@@ -37,6 +37,6 @@ ps. 环境贴图是找的[Light Probe Image Gallery](http://www.pauldebevec.com/
 
 ps2. 有人私信问我要预计算LUT的代码，也一起提供了
 
-{% asset_img PreIntegratedGF.png %}
+{% asset_img PreIntegratedGF.jpg %}
 
 {% include_code PreIntegratedGF.cpp lang:cpp PreIntegratedGF.cpp %}

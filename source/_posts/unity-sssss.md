@@ -12,7 +12,7 @@ toc: false
 
 | SSSSS打开 | SSSSS关闭 |
 |----------------------------------------------------------|----------------------------------------------------------------------------|
-| {% asset_img unity_sssss_on.png %} | {% asset_img unity_sssss_off.png %} |
+| {% asset_img unity_sssss_on.jpg %} | {% asset_img unity_sssss_off.jpg %} |
 
 然后不得不吐槽u3d的API太少了，怎么优化都不给力...
 

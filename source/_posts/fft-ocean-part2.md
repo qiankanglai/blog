@@ -17,7 +17,7 @@ toc: false
 
 Shader参考了今年[Advances in Real-Time Rendering in Games](http://advances.realtimerendering.com/s2017/index.html)里的[Crest: Novel Ocean Rendering Techniques in an Open Source Framework](https://github.com/huwb/crest-oceanrender)实现。
 
-{% asset_img fft_bake.png %}
+{% asset_img fft_bake.jpg %}
 
 从这张图其实就能看出来怎么做的，横坐标就是vertex id，纵坐标就是时间。具体的使用方式和嘉栋的代码一样：
 

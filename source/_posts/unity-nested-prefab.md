@@ -21,7 +21,7 @@ toc: false
 
 这个是我们目前用的解决方案: 用一个空的GameObject然后贴一个脚本去保存路径：
 
-{% asset_img prefabloader.png %}
+{% asset_img prefabloader.jpg %}
 
 编辑的时候点一下Load载入，编辑完了之后点Save保存。这个本质其实是空挂点和Prefab的来回切换，有几个好处：
 
