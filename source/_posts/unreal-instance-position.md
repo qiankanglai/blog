@@ -15,7 +15,7 @@ toc: false
 
 我是用VertexInterpolator来实现(其实意思一样)，这样能得到正确结果的原因是：**：对于Instance物体 在VS里计算世界坐标是对的，而PS里是错的**。
 
-{% asset_img unreal_foliage_instance.jpg %}
+![](/images/unreal_foliage_instance.jpg)
 
 下面来看下具体的原因：对于非Instance的物体，两者除了经过一次v2f插值之外没什么区别；但是对于Instance的物体，那么PS里计算的时候数据是不够的(没有InstanceLocalToWorld)。当PS里世界空间坐标是错误的情况下，肯定就不能指望了。
 
@@ -49,7 +49,7 @@ MaterialFloat3 Local0 = mul(MaterialFloat4(GetWorldPosition(Parameters),1.000000
 
 如果一定要获取准确Instance物体的LocalPosition，可以参考TransformLocalVectorToWorld来个CustomExpression自定义一发
 
-{% asset_img unreal_foliage_instance2.jpg %}
+![](/images/unreal_foliage_instance2.jpg)
 
 这里我自定义扩展了一个材质节点，把Pixel和Vertex分开输入(防止编译错误)。最后生成的代码就是
 

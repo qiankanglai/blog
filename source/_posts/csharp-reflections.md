@@ -33,7 +33,7 @@ IList windows = m_ProfilerWindows.GetValue(null) as IList;
 
 这样直接绕开了internal和private双重限制。在这个思路下，三下五除二就自己实现了想要的功能
 
-{% asset_img profilerdiff.jpg %}
+![](/images/profilerdiff.jpg)
 
 最后也不得不提示下这样做的缺点：
 

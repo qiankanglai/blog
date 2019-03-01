@@ -21,7 +21,7 @@ toc: false
 
 这个是我们目前用的解决方案: 用一个空的GameObject然后贴一个脚本去保存路径：
 
-{% asset_img prefabloader.jpg %}
+![](/images/prefabloader.jpg)
 
 编辑的时候点一下Load载入，编辑完了之后点Save保存。这个本质其实是空挂点和Prefab的来回切换，有几个好处：
 
@@ -76,7 +76,7 @@ public class Ref<T> where T : UnityEngine.Object {
 - 支持单独的Component的Save/Revert
 - 完整的嵌套Prefab解决方案
 
-{% asset_img uprefabs.jpg %}
+![](/images/uprefabs.jpg)
 
 其实它实现的思路和上面说的有些相同。当时我还特别好奇它是如何接管到原生Prefab的按钮，后来发现丫直接重载了整个GameObject面板，然后像素级去重新绘制了整个面板，可以说是非常的丧心病狂了...
 

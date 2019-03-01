@@ -46,7 +46,7 @@ on enabledGUIScripting(switch)
 end enabledGUIScripting
 {% endcodeblock %}
 
-{% asset_img applescript3.jpg %}
+![](/images/applescript3.jpg)
 
 简单解释一下代码：这段applescript做了三件事
 
@@ -62,7 +62,7 @@ click button "Enhance" of group 2 of window "iPhoto"
 
 我是使用的[UIBrowser](http://pfiddlesoft.com/uibrowser/)来进行抓取对应的按钮，见下图
 
-{% asset_img applescript1.jpg %}
+![](/images/applescript1.jpg)
 
-{% asset_img applescript2.jpg %}
+![](/images/applescript2.jpg)
 

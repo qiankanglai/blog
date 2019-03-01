@@ -9,7 +9,7 @@ toc: false
 
 <!--more-->
 
-{% asset_img agoramanager_profiler.jpg %}
+![](/images/agoramanager_profiler.jpg)
 
 这个应用场景其实是在处理消息队列，每一帧可能从C++层返回不少消息体回来，不同类型的消息体格式有所区别。
 

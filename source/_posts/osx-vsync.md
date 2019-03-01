@@ -17,4 +17,4 @@ GLint swapInt = 1;
 
 后来找到了这个[How to disable vsync on macOS](http://stackoverflow.com/questions/12345730/how-to-disable-vsync-on-mac-osx)，不过选项的位置改到了Window-Quartz Debug Settings里面的Beam Sync中
 
-{% asset_img osx_vsync.jpg %}
+![](/images/osx_vsync.jpg)

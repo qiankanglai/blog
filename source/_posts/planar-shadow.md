@@ -10,7 +10,7 @@ toc: false
 
 <!--more-->
 
-{% asset_img planar_shadow.gif %}
+![](/images/planar_shadow.gif)
 
 如果要做半透明的话手机上stencil闹心啊(咸鱼失去梦想脸
 

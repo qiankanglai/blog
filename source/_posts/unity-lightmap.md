@@ -13,7 +13,7 @@ Lightmap(光照贴图)是Unity里很常用的一个功能，毕竟移动设备�
 
 这个其实还是挺常见的坑：在编辑器里烘焙+播放场景都没问题，但是当从别的场景利用**异步加载**方式切换之后，就发现场景里的效果一团糟。下图是我使用`Application.LoadLevelAdditiveAsync`切换后的效果：
 
-{% asset_img unity_lightmap_bug1.jpg %}
+![](/images/unity_lightmap_bug1.jpg)
 
 如果是同步的加载场景倒是没有这个问题，但是实际游戏一般也不会让玩家卡住等待一段时间。这个问题在官方论坛和issue tracker上都有人提及，产生的原因是切换场景之后无法自动切换该场景使用的lightmap数据，具体可以参考`UnityEngine.LightmapSettings`相关API。
 

@@ -10,7 +10,7 @@ toc: false
 
 <!--more-->
 
-{% asset_img NormalMapGenerate.jpg %}
+![](/images/NormalMapGenerate.jpg)
 
 核心思路非常简单粗暴：
 

@@ -16,7 +16,7 @@ updated: 2016/11/8
 
 ps. 要把libunity.sym.so压缩zip之后上传，直接的话Bugly不认...
 
-{% asset_img bugly_libunity.jpg %}
+![](/images/bugly_libunity.jpg)
 
 # objdump 导出
 

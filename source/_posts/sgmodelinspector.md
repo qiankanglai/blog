@@ -9,9 +9,9 @@ thumbnail: /images/teaser/modelinspector.jpg
 
 <!--more-->
 
-{% asset_img uemesheditor.jpg %}
+![](/images/uemesheditor.jpg)
 
-{% asset_img sgmodelinspector.jpg %}
+![](/images/sgmodelinspector.jpg)
 
 # DecoratorEditor
 

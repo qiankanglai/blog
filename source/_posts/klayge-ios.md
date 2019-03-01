@@ -33,7 +33,7 @@ tags: [KlayGE,C++,iOS]
 
 题外话：之前我每次使用Xcode签名的时候都要蹦出来输入账户密码，后来根据[每次真机调试都要求输入用户名和密码，不知道什么原因](http://www.cocoachina.com/bbs/read.php?tid=256725)里的说法，在Keychain里把开发者证书转义到Login里就好了。
 
-{% asset_img klayge_ios_codesign.jpg %}
+![](/images/klayge_ios_codesign.jpg)
 
 ## Resources
 
@@ -119,11 +119,11 @@ OSX/iOS与其他平台不一样，一般是在main()入口里使用Apple的API�
 
 Apple的GLES Extension和别人家不太一样，然后就导致ARGB_EXT没法用~修改了glloader xml禁掉了这个就好了~
 
-{% asset_img klayge_ios_text.jpg %}
+![](/images/klayge_ios_text.jpg)
 
 目前手头只有es 2.0的机器，部分Sample能正常工作了；比较麻烦的是defer相关的几个，看起来要么是FBO挂了，要么是内存不够就跪了。而且有些Sample跑虚拟机会显示LLVM挂了，真机反而没事，真是无语...
 
-{% asset_img klayge_ios_reflect.jpg %}
+![](/images/klayge_ios_reflect.jpg)
 
 接下来要解决性能问题，回到OSX上搞定defer先！
 

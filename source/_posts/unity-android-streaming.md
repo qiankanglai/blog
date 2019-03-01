@@ -11,7 +11,7 @@ toc: false
 
 <!--more-->
 
-{% asset_img apk_streaming.jpg %}
+![](/images/apk_streaming.jpg)
 
 用Bandizip打开可以看到，Unity打出来的apk里StreamingAssets下东西是**Store**的。后来我搜到了论坛上的一个解释[Why the asset bundle slow in StreamingAssets on android device?](https://forum.unity3d.com/threads/why-the-asset-bundle-slow-in-streamingassets-on-android-device.401234/)
 

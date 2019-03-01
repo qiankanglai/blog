@@ -16,7 +16,7 @@ Adobe After Effects是个很强大的工具！之前一直想学了拿来做MAD�
 
 还有一种BadTV的效果，是通过在Solid Layer上面加Fractal Noise实现的，只要将大小调小了就有感觉了。
 
-{% asset_img AE_badTV.jpg %}
+![](/images/AE_badTV.jpg)
 
 这里还加了一个wave wrap，将噪声扭动起来=。=反正就是使劲山寨括弧笑。
 
@@ -24,7 +24,7 @@ Adobe After Effects是个很强大的工具！之前一直想学了拿来做MAD�
 
 依靠神级插件Trapcode Form。
 
-{% asset_img AE_form.jpg %}
+![](/images/AE_form.jpg)
 
 这个插件本质是在三维空间生成粒子。我一般是选择x,y方向上各500的粒子(max)，长宽同视频大小；z方向范围5，放50的粒子。center Z选择-600，这样看上去正好覆盖屏幕。
 
@@ -38,7 +38,7 @@ BBC的《基友夏洛克》中，当主人公在YY时候，屏幕上会蹦出各
 
 基本思路就是用textlayer，通过调整position和alpha等属性，加上遮罩做的。
 
-{% asset_img AE_word.jpg %}
+![](/images/AE_word.jpg)
 
 文字在快速闪动的过程中，只有一个字的范围是可见的。
 

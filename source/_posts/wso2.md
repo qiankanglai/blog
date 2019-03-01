@@ -17,7 +17,7 @@ tags: Java
 
 控制台`sudo vim /etc/environment`
 
-{% asset_img wso2_1.1.jpg %}
+![](/images/wso2_1.1.jpg)
 
 这样每次开机都就自动设置进去了。至于说怎么装java的问题……啧啧
 
@@ -25,11 +25,11 @@ tags: Java
 
 解压下载的压缩包，进入bin子目`./wso2server.sh`
 
-{% asset_img wso2_1.2.jpg %}
+![](/images/wso2_1.2.jpg)
 
 ## 打开浏览器进入https://localhost:9443/carbon/admin/login.jsp
 
-{% asset_img wso2_1.3.jpg %}
+![](/images/wso2_1.3.jpg)
 
 使用admin,admin登录即可~到这里服务器就能用了
 
@@ -43,35 +43,35 @@ tags: Java
 
 ### 建立carbon项目
 
-{% asset_img wso2_1.4.jpg %}
+![](/images/wso2_1.4.jpg)
 
-{% asset_img wso2_1.5.jpg %}
+![](/images/wso2_1.5.jpg)
 
 ### 建立一个普通项目，起一个文艺名字，写一段2b代码作为测试
 
-{% asset_img wso2_1.6.jpg %}
+![](/images/wso2_1.6.jpg)
 
 ### 在carbon项目中右键-新建Axis Service
 
-{% asset_img wso2_1.7.jpg %}
+![](/images/wso2_1.7.jpg)
 
 选中刚才写的那个类
 
-{% asset_img wso2_1.8.jpg %}
+![](/images/wso2_1.8.jpg)
 
 在生成的service中右键generate-AAR
 
-{% asset_img wso2_1.9.jpg %}
+![](/images/wso2_1.9.jpg)
 
 ### 发布到网站
 
 使用管理员登录as管理网站后，在左侧Web Services-Add-Axis2 Service，上传生成的AAR即可
 
-{% asset_img wso2_1.10.jpg %}
+![](/images/wso2_1.10.jpg)
 
 回到Web Service List，可以看到多了一个服务啊！Try it！
 
-{% asset_img wso2_1.11.jpg %}
+![](/images/wso2_1.11.jpg)
 
 ## 如何在代码中调用WSDL服务
 
@@ -79,11 +79,11 @@ tags: Java
 
 在DashBoard中
 
-{% asset_img wso2_1.12.jpg %}
+![](/images/wso2_1.12.jpg)
 
 我使用了-s -t命令生成client，下载下来加压到一个新的项目中
 
-{% asset_img wso2_1.13.jpg %}
+![](/images/wso2_1.13.jpg)
 
 ### Eclipse修改
 
@@ -93,11 +93,11 @@ tags: Java
 
 修改junit代码啥的~
 
-{% asset_img wso2_1.14.jpg %}
+![](/images/wso2_1.14.jpg)
 
 最后运行得到结果~竟然和Try it是一样的！
 
-{% asset_img wso2_1.15.jpg %}
+![](/images/wso2_1.15.jpg)
 
 弄完收工。。。贴图太累了~录视频算了赖皮
 
@@ -109,15 +109,15 @@ tags: Java
 
 (假设ubuntu已经有了部署好的服务并开启AS)先用浏览器上一下确认可用抠鼻孔
 
-{% asset_img wso2_2.1.jpg %}
+![](/images/wso2_2.1.jpg)
 
 ## 打开ESB登录进去
 
-{% asset_img wso2_2.2.jpg %}
+![](/images/wso2_2.2.jpg)
 
 ## 左边Manage-Web Services-Add-Proxy Services
 
-{% asset_img wso2_2.3.jpg %}
+![](/images/wso2_2.3.jpg)
 
 ## 选择Custom Proxy
 
@@ -127,35 +127,35 @@ tags: Java
 - 输入AS中WSDL2的连接
 - Test=>next
 
-{% asset_img wso2_2.4.jpg %}
+![](/images/wso2_2.4.jpg)
 
 选择'Define Inline'，在'Define Endpoint' 下面。Create
 
-{% asset_img wso2_2.5.jpg %}
+![](/images/wso2_2.5.jpg)
 
 这里注意是用AS中axis2 DashBoard中的http的endpoint(使用https由于跨域问题会有错误~估计需要导入证书什么的就没管)
 
-{% asset_img wso2_2.5.jpg %}
+![](/images/wso2_2.5.jpg)
 
 选择'Define Inline' 在'Define Out Sequence' 下，'Add Child'->'Core'->'Send'
 
 最后保存就ok了
 
-{% asset_img wso2_2.6.jpg %}
+![](/images/wso2_2.6.jpg)
 
 ## 看到服务里多了一个Proxy Service爬过
 
-{% asset_img wso2_2.7.jpg %}
+![](/images/wso2_2.7.jpg)
 
 ## Try It(at ESB)
 
-{% asset_img wso2_2.8.jpg %}
+![](/images/wso2_2.8.jpg)
 
 收工…………………………这时候是先访问的ESB的代理服务，然后ESB去调用AS服务的形式抓狂
 
 ps.我是两个虚拟机host-only模式下互相访问的~罪过罪过又用盗版了郁闷
 
-{% asset_img wso2_2.9.jpg %}
+![](/images/wso2_2.9.jpg)
 
 又冷又饿。。。(好冷)等来修电脑了……
 
@@ -171,6 +171,6 @@ ps.我是两个虚拟机host-only模式下互相访问的~罪过罪过又用盗�
 
 通过修改/respository/conf/carbon.xml中一系列端口(譬如AS保持不变，ESB每个端口号+1，IS每个端口号+2)就可以达到同时运行的目的。
 
-{% asset_img wso2_3.1.jpg %}
+![](/images/wso2_3.1.jpg)
 
-{% asset_img wso2_3.2.jpg %}
+![](/images/wso2_3.2.jpg)

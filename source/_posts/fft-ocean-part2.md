@@ -11,13 +11,13 @@ toc: false
 
 <!--more-->
 
-{% asset_img fft_part2.gif %}
+![](/images/fft_part2.gif)
 
 左边是CPU FFT，右边是将顶点信息Bake到贴图之后利用vertex texture fetch实现的版本。
 
 Shader参考了今年[Advances in Real-Time Rendering in Games](http://advances.realtimerendering.com/s2017/index.html)里的[Crest: Novel Ocean Rendering Techniques in an Open Source Framework](https://github.com/huwb/crest-oceanrender)实现。
 
-{% asset_img fft_bake.jpg %}
+![](/images/fft_bake.jpg)
 
 从这张图其实就能看出来怎么做的，横坐标就是vertex id，纵坐标就是时间。具体的使用方式和嘉栋的代码一样：
 

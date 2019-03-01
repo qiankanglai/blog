@@ -16,8 +16,8 @@ toc: false
 
 最近倒腾了下Intel GPA发现好用
 
-{% asset_img intel_gpa_android_1.jpg %}
+![](/images/intel_gpa_android_1.jpg)
 
-{% asset_img intel_gpa_android_2.jpg %}
+![](/images/intel_gpa_android_2.jpg)
 
 对于自家的App只要加一个`debuggable=true`就行了，对于别人家的……咳咳，我一开始以为用[Xposed + enable-debugger Flag](https://forum.xda-developers.com/xposed/xposed-enable-debugger-flag-t3186969)可以解决，后来发现ROOT的机子直接就能跑了(逃

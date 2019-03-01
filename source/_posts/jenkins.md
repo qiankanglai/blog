@@ -53,7 +53,7 @@ thumbnail: /images/teaser/jenkins_list.jpg
 
 Unity其实是在命令行模式下调用一个静态方法，实现具体的逻辑。我司维护了一套公用的SDK切换工具，会从命令行读取更多的参数，实现诸如刷新Plugins文件夹内容、切换宏、修改图标/版本号/配置文件等、加密数据这些功能。
 
-{% asset_img sgplugins_thirdpartysdk.jpg %}
+![](/images/sgplugins_thirdpartysdk.jpg)
 
 Android版本直接就出了apk，iOS版本还需要调用XCode。最后编译完了之后，调用Shell将包加上时间戳归档。
 
@@ -65,6 +65,6 @@ pss. XCode Plugin可以在Custom xcodebuild arguements里加一行`DEPLOYMENT_PO
 
 主要参考了[详解Shell脚本实现iOS自动化编译打包提交](http://www.jianshu.com/p/bd4c22952e01)一文，其实就是`altool`的调用。之前说了包的文件名是有时间戳的，因此可以排序之后找到最新的一个包，调用上传即可。
 
-{% asset_img jenkins_upload_testflight.jpg %}
+![](/images/jenkins_upload_testflight.jpg)
 
-{% asset_img jenkins_upload_testflight2.jpg %}
+![](/images/jenkins_upload_testflight2.jpg)

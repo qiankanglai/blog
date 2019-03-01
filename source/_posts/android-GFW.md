@@ -12,15 +12,15 @@ date: 2014/8/29
 
 这个比较简单，在SecureCRT里面设置Port Forwarding就行了，我这里是用的7777端口(Name可以乱填)。
 
-{% asset_img securecrt1.jpg %}
+![](/images/securecrt1.jpg)
 
 然后是Remote/X11里
 
-{% asset_img securecrt2.jpg %}
+![](/images/securecrt2.jpg)
 
 这样设置之后，直接登陆vps就可以使用7777端口作为socks5代理了，例如Firfox里的foxyproxy插件设置
 
-{% asset_img foxyproxy.jpg %}
+![](/images/foxyproxy.jpg)
 
 # Socks5代理转HTTP代理
 
@@ -32,4 +32,4 @@ date: 2014/8/29
 
 在Bash里用`export HTTP_PROXY=http://166.111.x.x:8118 HTTPS_PROXY=http://166.111.x.x:8118`之后，照[官网步骤](https://source.android.com/source/downloading.html)做就行。虽然速度比较慢，反正挂着吧……
 
-{% asset_img androidrepo.jpg %}
+![](/images/androidrepo.jpg)

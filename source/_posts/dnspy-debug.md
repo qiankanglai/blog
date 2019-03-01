@@ -11,6 +11,6 @@ toc: false
 
 断点、变量等功能均可使用。操作起来也非常简单：调试菜单-附加到进程(Unity)即。
 
-{% asset_img dnspy_debug.jpg %}
+![](/images/dnspy_debug.jpg)
 
 ps. 配合官方已经放出了[UnityCsReference](https://github.com/Unity-Technologies/UnityCsReference)使用效果更佳。

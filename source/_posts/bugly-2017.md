@@ -20,4 +20,4 @@ toc: false
 
 至于新的怎么用其实非常简单: **把.so.debug后缀名改回.so**然后压缩包上传即可。Unity默认打出来的zip是STORE，所以可以重新压缩一边减小上传大小。
 
-{% asset_img bugly_2017.jpg %}
+![](/images/bugly_2017.jpg)

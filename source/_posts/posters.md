@@ -15,10 +15,10 @@ toc: false
 
 唔，临时接到的任务……为了赶时间，而且想换换口味做了一个山寨metro的。QP提了点，确实渐变背景会影响很大，而且字体很关键。右下角实在想不出放啥了就弄QR码。某人竟然说这个连接到杜蕾丝，严重需要自重(¬_¬)
 
-{% asset_img 2012_poster_sutuo.jpg %}
+![](/images/2012_poster_sutuo.jpg)
 
 ### 2012.3.26 科协[软件设计大赛](http://www.hisoft2012.org)展板
 
 同样的metro，字体还是细线等宽好多了
 
-{% asset_img 2012_poster_hisoft.jpg %}
+![](/images/2012_poster_hisoft.jpg)

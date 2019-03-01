@@ -11,11 +11,11 @@ Recently I found an interesting bug with Adreno Profiler: this cannot work corre
 
 <!--more-->
 
-{% asset_img adreno_profiler_half_wrong.jpg %}
+![](/images/adreno_profiler_half_wrong.jpg)
 
 I tried to seek help from [developers' forum](https://developer.qualcomm.com/forum/qdn-forums/software/adreno-gpu-profiler/29349) but got no response yet. After two days' part time work, I solved this bug by myself.
 
-{% asset_img adreno_profiler_half_correct.jpg %}
+![](/images/adreno_profiler_half_correct.jpg)
 
 Since I have no access to the source code, I have to decompile it with [ILSpy](http://ilspy.net/). The key codes can be found in `QXProfilerControlsCS.dll`. I replace the implemention for `public static float HalfToFloat(uint half)` in *StateDataStoreHelper.cs* with codes from [CShart Half](http://sourceforge.net/projects/csharp-half/). (In fact, I've got no idea what does the original code mean...)
 

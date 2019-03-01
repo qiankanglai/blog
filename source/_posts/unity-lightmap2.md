@@ -14,7 +14,7 @@ updated: 2016/4/11
 
 | Simulation Mode | Asset Bundle |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| {% asset_img unity_ab_lm_right.jpg %} | {% asset_img unity_ab_lm_wrong.jpg %} |
+| ![](/images/unity_ab_lm_right.jpg) | ![](/images/unity_ab_lm_wrong.jpg) |
 
 这个是用官方的AssetBundle例子改的，发现对于烘焙过的场景：
 
@@ -25,11 +25,11 @@ updated: 2016/4/11
 
 | Simulation Mode | Asset Bundle |
 |--------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| {% asset_img unity_ab_lm_right_frame.jpg %} | {% asset_img unity_ab_lm_wrong_frame.jpg %} |
+| ![](/images/unity_ab_lm_right_frame.jpg) | ![](/images/unity_ab_lm_wrong_frame.jpg) |
 
 可以看到对应的宏一个是`LIGHTMAP_OFF`，一个是`LIGHTMAP_ON`。但是场景里确实已经利用之前我提到的API设置了Render对应信息。最后发现了另一个不同之处：
 
-{% asset_img unity_ab_lm_wrong_detail.jpg %}
+![](/images/unity_ab_lm_wrong_detail.jpg)
 
 也就是说AssetBundle载入出来的场景是丢失了static信息... 后来我在官方论坛上找到了一模一样的BUG: [Unity 5.3 - Objects in scenes loaded from AssetBundles are losing their STATIC flag](http://forum.unity3d.com/threads/unity-5-3-objects-in-scenes-loaded-from-assetbundles-are-losing-their-static-flag.377771/) ┑(￣Д ￣)┍
 
@@ -37,7 +37,7 @@ updated: 2016/4/11
 
 简单粗暴的解决方法就是和我前面用的方法一样，不是直接载入整个场景而是用prefab化的物体，这样载入出来的东西不会丢失static信息
 
-{% asset_img unity_ab_lm_right_detail.jpg %}
+![](/images/unity_ab_lm_right_detail.jpg)
 
 # Case 2
 
@@ -49,7 +49,7 @@ DynamicGI.UpdateEnvironment();
 
 另一方面就是只能强行关掉lightmap，不然出来的结果就是不一样 (╯‵□′)╯︵┻━┻
 
-{% asset_img unity_lm_ab_compare.jpg %}
+![](/images/unity_lm_ab_compare.jpg)
 
 <del>也许Unity想的是至少实时部分我复原了...</del>
 

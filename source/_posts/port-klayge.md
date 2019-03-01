@@ -32,7 +32,7 @@ ps. 对于OSX的Framework链接，在CMake里的写法和dylib不太一样，例
 
 使用XCode运行程序的时候必须设置工作目录，不然会载入资源失败。这个是我山寨出来的一个东西，之前Google没找到...
 
-{% asset_img klayge_port1.jpg %}
+![](/images/klayge_port1.jpg)
 
 在Visual Studio里，是通过覆盖VisualStudio2010UserFile.vcxproj.user.in来实现的，然后我通过对比XCode的工程项目，发现在package contents里覆盖一个xcode.xcscheme.in也能做，就山寨了一发出来了。
 
@@ -46,7 +46,7 @@ ps. 在CMake里通过`$ENV{USER}`获得环境变量，通过`CONFIGURE_FILE`将�
 
 XCode自带了一个GLES Capture，用来在App上调试OpenGL，但是如果是OSX程序需要另外下载调试工具(歧视的太明显了)~一开始还不怎么会用这玩意儿，后来发现该有的功能还是都有的，关键就是要在程序暂停的时候才能显示信息。
 
-{% asset_img klayge_port2.jpg %}
+![](/images/klayge_port2.jpg)
 
 使用Profiler启动程序之后，一般是在`CGALFlushDrawable()` Before/After加断点；当程序跑到断点的时候，就可以看到包括渲染状态、Shader、Texture、FBO以及各个Buffer等信息。
 

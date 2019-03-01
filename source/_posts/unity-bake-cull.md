@@ -14,7 +14,7 @@ Unity中的烘焙(不管是老的Beast还是新的Enlighten)有一个非常恼�
 
 | 不带Culling | 带Culling |
 |----------------------------------------------------------|----------------------------------------------------------|
-| {% asset_img unity_bake_default.jpg %} | {% asset_img unity_bake_culling.jpg %} |
+| ![](/images/unity_bake_default.jpg) | ![](/images/unity_bake_culling.jpg) |
 
 - 原代码中`(light.cullingMask & layerForGroup) > 0`这种判断是错误的
 - 反复使用` UnityEditor.Lightmapping.BakeSelected`来烘焙多次，这个方法在某些Unity版本中可用，但是有时候会覆盖上一次烘焙结果，导致运行完之后只剩下了最后一次烘焙结果；我的解决方案是每次烘焙之后拷贝出当前的光照贴图，同时保存Renderer上的信息，最后一起复原(这部分可以参考{% post_link unity-lightmap %}里的代码)

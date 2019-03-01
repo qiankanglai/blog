@@ -11,4 +11,4 @@ toc: false
 
 就语法来说抽空换了下就行，然后主要是熟悉了下配置，感觉是大同小异的东西。等这段时间忙完再好好打理把(FLAG已立
 
-{% asset_img old_style4.jpg %}
+![](/images/old_style4.jpg)
