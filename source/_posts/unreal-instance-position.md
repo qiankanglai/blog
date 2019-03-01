@@ -2,9 +2,10 @@
 title: Unreal中针对Instance物体获取位置
 date: 2019-02-26 23:56:09
 tags: Unreal
+toc: false
 ---
 
-最近帮忙解决了一个很奇怪的问题：在Instance的材质球里如何获得模型的原始LocalPosition，其实也就是[Foliage instance position in Material editor](https://answers.unrealengine.com/questions/484539/foliage-instance-position-in-material-editor.html)。
+最近帮忙解决了一个很奇怪的问题：在材质球里如何获得Instance模型(譬如Foliage)的坐标，其实也就是[Foliage instance position in Material editor](https://answers.unrealengine.com/questions/484539/foliage-instance-position-in-material-editor.html)。TA需要的是模型原点的世界坐标。
 
 <!-- more -->
 
@@ -12,11 +13,13 @@ tags: Unreal
 
 > Try passing object position through custom UVs
 
-我后来是用的VertexInterpolator来实现的，简单来说就是**在VS里计算世界坐标是计算的，而PS里是错的**。
+我是用VertexInterpolator来实现(其实意思一样)，这样能得到正确结果的原因是：**在VS里计算世界坐标是计算的，而PS里是错的**。
 
 {% asset_img unreal_foliage_instance.jpg %}
 
-下面来看下具体的原因：对于非Instance的物体，两者除了经过一次v2f插值之外没什么区别；但是对于Instance的物体(譬如Foliage)，那么PS里计算的时候数据是不够的(没有`InstanceLocalToWorld`)。当PS里世界空间坐标是错误的情况下，肯定就不能指望倒算回来的LocalPosition正确了...
+下面来看下具体的原因：对于非Instance的物体，两者除了经过一次v2f插值之外没什么区别；但是对于Instance的物体，那么PS里计算的时候数据是不够的(没有InstanceLocalToWorld)。当PS里世界空间坐标是错误的情况下，肯定就不能指望了。
+
+ps. 仔细观察可以发现UE4内置的不少节点其实都是实现了两个版本(Vertex/Pixel)，区分的地方其实就是第一个参数是`FMaterialVertexParameters`还是`FMaterialPixelParameters`。
 
 {% codeblock lang:hlsl %}
 /** Transforms a vector from local space to world space (VS version) */
