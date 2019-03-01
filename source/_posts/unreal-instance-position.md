@@ -13,7 +13,7 @@ toc: false
 
 > Try passing object position through custom UVs
 
-我是用VertexInterpolator来实现(其实意思一样)，这样能得到正确结果的原因是：**在VS里计算世界坐标是计算的，而PS里是错的**。
+我是用VertexInterpolator来实现(其实意思一样)，这样能得到正确结果的原因是：**：对于Instance物体 在VS里计算世界坐标是对的，而PS里是错的**。
 
 {% asset_img unreal_foliage_instance.jpg %}
 
