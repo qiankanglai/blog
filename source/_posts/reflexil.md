@@ -73,7 +73,7 @@ namespace ReflexilDemo
 
 最后保存我们刚才的修改，然后测试一下新的程序集。
 
-![](https://www.codeproject.com/KB/msil/reflexil/modsave.jpg $}
+![](https://www.codeproject.com/KB/msil/reflexil/modsave.jpg}
 
 可以看到保存过的程序能正常显示标题，说明它使用了新的重载函数，并将正确的参数传进去了。
 
