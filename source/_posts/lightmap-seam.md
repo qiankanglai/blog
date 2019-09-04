@@ -1,7 +1,8 @@
 ---
 title: 光照贴图接缝
 date: 2019-08-24 12:18:23
-tags:
+tags: Unity
+mathjax: true
 ---
 
 之前翻Unity的更新日志时候发现Progressive Lightmapper里自带上了[Lightmap seam stitching](https://docs.unity3d.com/Manual/Lightmapping-SeamStitching.html)。正好之前研究过这个问题，出于手痒也在Unity里实现了一发，在这里也整理下这个问题的原因、现象及解决办法。
@@ -61,4 +62,36 @@ ps. 这里有个小技巧就是不同通道颜色完全可以分别计算，每�
 
 ![](/images/lightmap_seam_optimized_point.jpg)
 
-具体使用其实就是菜单栏里的SO下面几个，可以调节的参数在代码里的`cosNormalThreshold`和`lambda`而已，回头有空再整理下文档了。
+### 数学推导
+
+这里稍微展开讲下数学部分，我们是如何去建模、求解这个能量方程的: 首先Lightmap Seam上采样若干对点，每对点(上图的$C_{0i}$和$C_{1i}$)又对应到光照贴图里的8个像素$C\_{i0}=\sum^{4}\_{j} w\_{0ij} t\_{0ij}$。这里考虑了bilinear采样，$w\_{0ij}$表达权重(也就是$C\_{i0}$距离四个点的距离)，$t\_{0ij}$表达光照贴图上这个像素的颜色。
+
+然后我们来构造一个矩阵$AT=B$，其中T就是每个像素对应的值，$A$里面每一行对应一个约束，分为两类
+
+- $A[k] = [... w\_{0i1} ... w\_{0i2} ... w\_{0i3} ... w\_{0i4} ... -w\_{1i1} ... -w\_{1i2} ... -w\_{1i3} ... -w\_{1i4} ...], B[k] = 0$ 这里A的其余项都是0，利用矩阵乘法的性质就是构造出$\sum^{4}\_{j} w\_{0ij} t\_{0ij} - \sum^{4}\_{j} w\_{1ij} t\_{1ij} = 0$即接缝两侧值要相同；
+- $A[k] = [... lambda ...], B[k] = lambda * c$这里c为光照贴图原始像素的值，对应就是$lambda t_{i} = c_{i}$即每个像素的值和原始值相比，不能变化过大。
+
+这样就构造了一个过拟合的公式，利用最小二乘法求解即可。$lambda$是权重，控制最后的结果是更倾向于接缝消失还是更倾向于颜色变化小。
+
+更具体的实现可以参考[Algorithm Analysis: Linear Least Squares Problem](http://www.programmersought.com/article/3597186469/)，提到了Chomsky decomposition method。
+
+### 实现细节
+
+实现的时候我遇到了一个非常坑的光照贴图编码问题：如何正确的把光照贴图数据读取出来，因为Unity在不同平台下自带了不同编码方式...当时折腾了半天没搞定，最后野路子直接写了个`Hidden/DecodeLightmap`的Shader把原始光照贴图拷贝到一个Float纹理然后读出来，算是绕开这个大坑...
+
+其他的还好就遇到了几个小问题。
+
+ps. 这个工程是我做着玩的，没有在大规模场景测试过...
+
+### 使用说明
+
+我简单包装了一下，功能都在菜单里
+
+![](/images/seamoptimizer_menu.png)
+
+- Optimize Lightmaps: 一键优化接缝，其实是在Unity自带的光照贴图旁边生成一堆优化过的版本
+- Apply Optimized Lightmaps: 将处理过的光照贴图应用到场景
+- Apply NonOptimized Lightmaps: 将原版光照贴图应用到场景
+- Visualize Mesh 2UV/Seams: 调试功能，无视
+
+代码里有两个参数`cosNormalThreshold`控制那些面需要平滑接缝，`lambda`控制能量函数权重。
