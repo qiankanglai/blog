@@ -6,6 +6,8 @@ tags: [Android, C++]
 
 最近一段时间突然发现打包机上编译引擎安卓版本极慢，正好有现成的[IncrediBuild](https://www.incredibuild.com/)所以研究下能不能用来加速。IB本身是商业软件，对Visual Studio的支持已经非常好了: 既可以使用Extension形式直接调用，又可以使用命令行传参sln。但是网上关于结合NDK使用的资料就非常少，这周花了大半天终于跑通流程，就此记录一下。
 
+<!--more-->
+
 # IB原理及基础使用方式
 
 [IncrediBuild User Manual](https://incredibuild.atlassian.net/wiki/spaces/IUM/overview)里写的还是比较清楚，我主要看了下[BuildConsole Command Line Interface](https://incredibuild.atlassian.net/wiki/spaces/IUM/pages/14024981/BuildConsole+Command+Line+Interface)这个部分:
