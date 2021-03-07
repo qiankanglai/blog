@@ -10,7 +10,7 @@ thumbnail: /images/teaser/ue4_auto_convex.jpg
 - 利用DOP(discrete oriented polytopy)即若干对齐轴平面向内挤压;
 - Auto Convex自动生成。
 
-此外可以将多个简模组合使用，再次不赘述。我们一开始是批量Auto Convex，结果发现对于一些"规则"网格生成的结果非常诡异。例如题图中的一个长方形盒子，生成的Auto Convex似乎只有一个表面。
+此外可以将多个简模组合使用，这里不再赘述。我们一开始是批量Auto Convex，结果发现对于一些"规则"网格生成的结果非常诡异。例如题图中的一个长方形盒子，生成的Auto Convex似乎只有一个表面。
 
 <!--more-->
 
@@ -79,25 +79,13 @@ def register():
 {% codeblock lang:cpp %}
 static void InitParameters(IVHACD::Parameters &VHACD_Params, uint32 InHullCount, uint32 InMaxHullVerts,uint32 InResolution)
 {
-	// Override VHACD allocator with ours
-	btAlignedAllocSetCustom(btAllocImpl, btFreeImpl);
-	btAlignedAllocSetCustomAligned(btAlignedAllocImpl, btAlignedFreeImpl);
-
-#ifdef DEBUG_VHACD
-	VHACD_Params.m_logger = &VHACDLogger;
-#endif //DEBUG_VHACD
-#if CPUPROFILERTRACE_ENABLED
-	VHACD_Params.m_profiler = &VHACDProfiler;
-#endif
-	VHACD_Params.m_taskRunner = &VHACDTaskRunner; // any async tasks will be run on existing UE thread pools.
-	VHACD_Params.m_resolution = FMath::Max(InResolution, (uint32)10000); // Maximum number of voxels generated during the voxelization stage (default=100,000, range=10,000-16,000,000)
-	VHACD_Params.m_maxNumVerticesPerCH = FMath::Max(InMaxHullVerts, (uint32)4); // Controls the maximum number of triangles per convex-hull (default=64, range=4-1024)
+	VHACD_Params.m_resolution = InResolution; // Maximum number of voxels generated during the voxelization stage (default=100,000, range=10,000-16,000,000)
+	VHACD_Params.m_maxNumVerticesPerCH = InMaxHullVerts; // Controls the maximum number of triangles per convex-hull (default=64, range=4-1024)
 	VHACD_Params.m_concavity = 0;		// Concavity is set to zero so that we consider any concave shape as a potential hull. The number of output hulls is better controlled by recursion depth and the max convex hulls parameter
 	VHACD_Params.m_maxConvexHulls = InHullCount;	// The number of convex hulls requested by the artists/designer
 	VHACD_Params.m_oclAcceleration = false;
 	VHACD_Params.m_minVolumePerCH = 0.003f; // this should be around 1 / (3 * m_resolution ^ (1/3))
 	VHACD_Params.m_projectHullVertices = true; // Project the approximate hull vertices onto the original source mesh and use highest precision results opssible.
-	VHACD_Params.m_pca = 1; // align mesh for more optimal processing of long diagonal meshes
 }
 {% endcodeblock %}
 
